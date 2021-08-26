@@ -1,0 +1,17 @@
+@import 'variables';
+
+.navbar .navbar-dark{
+    background-color: $bgColorWhite;
+    
+    .bg-dark{
+    background-color: $bgColorWhite;
+
+        .navbar-brand{        
+            background-color: $bgColorWhite;
+            img{
+                height: 10vh;
+                
+            }
+        }
+    }
+}

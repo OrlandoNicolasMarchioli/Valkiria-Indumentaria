@@ -20,52 +20,39 @@ function agregarCarrito(producto){
     if( producto != " ") {
         console.log(producto)
         prod = producto
-        for(let prod of productos){
+        for(let prod in productos){
             console.log(producto)
 
             /* El problema lo tengo desde aca, entra en un bucle infinito */
-            for(prod ;productos; prod + 1){
-                console.log(producto)                
+            for(let i  ; i < productos.length ; i++){
+                console.log(prod)                
                 cantidad = parseInt(prompt( "Ingrese la cantidad que desea comprar"))                
                 
-                cant = cantidad
-                stock = producto.stock
+                producto.stock = 0                
                 
-                if (cant < 500){/* si aca le pongo producto.stock, entra en un bucle infinito */
+                if (cantidad < 500){/* si aca le pongo producto.stock, entra en un bucle infinito */
                     console.log(cantidad)
-                    total = cant * producto.precio
-                    producto.stock = producto.stock - cant
-                    producto = prompt("Ingrese el nombre del siguiente producto a comprar (en caso de no querer mas ingrese 0)")/* Hasta aca todo bien, pero ingreso el "0" para salir y me sigue preguntando por productos */
-                    if(producto = "0"){
-                        break
-                    }
+                    /* Entra al if pero no realiza ninguna operacion */
+                    total = cantidad * producto.precio
+                    producto.stock = producto.stock - cantidad
+                    prod = prompt("Ingrese el nombre del siguiente producto a comprar (en caso de no querer mas ingrese 0)") *//* Hasta aca todo bien, pero ingreso el "0" para salir y me sigue preguntando por productos *//
                     monto.push(total)
-                    carritoFinal.push(Producto)
-                        
-                    
+                        carritoFinal.push(Producto)
+
                 }
-                /* else{
+                else{
                     console.log(cantidad)
                     alert("La cantidad ingresada es mayor al stock actual")
                     cantidad = parseInt(prompt( "Ingrese la cantidad que desea comprar"))
-                    } */
-                
-                
+                        }                
             }
         
-            /* else{
-                alert("El producto no se encuenta en stock")
-                producto = prompt("Ingrese otro producto que desee comprar")
-                console.log()
-            } */
-            console.log(screen)
         }
         
     }
     else{
         alert("El nombre ingresado no es valido");
-        producto =prompt("Ingrese otro producto que desee comprar")
-    }
+    } 
     
 }
 
@@ -88,6 +75,7 @@ const productos = [producto1, producto2, producto3, producto4, producto5, produc
 
 
 producto = prompt("Ingrese un producto que desee comprar")
+producto = producto.toLowerCase();
 agregarCarrito(producto)
 alert("El monto total con impuestos incluidos es: " + monto * 1.21)
 alert("Los productos comprados son: " + carritoFinal)
