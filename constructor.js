@@ -2,7 +2,7 @@
 
 function Producto(nombre,precio,stock){
     this.nombre = nombre;
-    this.precio = parceFloat(precio);
+    this.precio = parseFloat(precio);
     this.stock = stock; 
     this.cantidad = function(){
         alert(" El producto " + nombre + " tiene un precio de " + precio + " pesos  Y contamos con una cantidad de " + stock + " unidades ")
@@ -16,43 +16,59 @@ function Producto(nombre,precio,stock){
 function agregarCarrito(producto){
     monto = []
     carritoFinal = []
-    if(producto == String){
-        for(producto in productos){    
-            if (Producto in productos){
-                cantidad = parceInt(prompt( "Ingrese la cantidad que desea comprar"))
-                if (cantidad < stock){
-                    total = cantidad * precio
-                    stock = stock - cantidad
-                    producto = prompt("Ingrese el nombre del siguiente producto a comprar (en caso de no querer mas ingrese 0)")
-                    monto.push(total)
-                    carritoFinal.push(Producto)
+    console.log(producto)
+    if( producto != " ") {
+        console.log(producto)
+        prod = producto
+        for(let prod of productos){
+            console.log(producto)
 
-                    if(producto == "0"){
+            /* El problema lo tengo desde aca, entra en un bucle infinito */
+            for(prod ;productos; prod + 1){
+                console.log(producto)                
+                cantidad = parseInt(prompt( "Ingrese la cantidad que desea comprar"))                
+                
+                cant = cantidad
+                stock = producto.stock
+                
+                if (cant < 500){/* si aca le pongo producto.stock, entra en un bucle infinito */
+                    console.log(cantidad)
+                    total = cant * producto.precio
+                    producto.stock = producto.stock - cant
+                    producto = prompt("Ingrese el nombre del siguiente producto a comprar (en caso de no querer mas ingrese 0)")/* Hasta aca todo bien, pero ingreso el "0" para salir y me sigue preguntando por productos */
+                    if(producto = "0"){
                         break
                     }
+                    monto.push(total)
+                    carritoFinal.push(Producto)
+                        
+                    
                 }
-                else{
+                /* else{
+                    console.log(cantidad)
                     alert("La cantidad ingresada es mayor al stock actual")
-                    cantidad = parceInt(prompt( "Ingrese la cantidad que desea comprar"))
-                }
+                    cantidad = parseInt(prompt( "Ingrese la cantidad que desea comprar"))
+                    } */
+                
+                
             }
         
-            else{
+            /* else{
                 alert("El producto no se encuenta en stock")
-                producto = toLowerCase(prompt("Ingrese otro producto que desee comprar"))
-            }
+                producto = prompt("Ingrese otro producto que desee comprar")
+                console.log()
+            } */
+            console.log(screen)
         }
         
     }
     else{
         alert("El nombre ingresado no es valido");
-        producto = toLowerCase(prompt("Ingrese otro producto que desee comprar"))
+        producto =prompt("Ingrese otro producto que desee comprar")
     }
-    alert("El monto total con impuestos incluidos es: " + monto * 1.21)
-    alert("Los productos comprados son: " + carritoFinal)
+    
 }
 
-const productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9, producto10]
 
 
 
@@ -68,9 +84,13 @@ const producto8 = new Producto("arroz", 20 , 100);
 const producto9 = new Producto("pan", 20 , 300);
 const producto10 = new Producto("fideos", 15 , 50);
 
+const productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9, producto10]
 
-producto = toLowerCase(prompt("Ingrese otro producto que desee comprar"))
+
+producto = prompt("Ingrese un producto que desee comprar")
 agregarCarrito(producto)
+alert("El monto total con impuestos incluidos es: " + monto * 1.21)
+alert("Los productos comprados son: " + carritoFinal)
 
 
 
