@@ -1,15 +1,63 @@
 @import 'variables';
 
-.navbar .navbar-dark{
-    background-color: $bgColorWhite;
-    
-    .bg-dark{
-    background-color: $bgColorWhite;
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
 
-        .navbar-brand{        
-            background-color: $bgColorWhite;
-            img{
-                height: 10vh;
+}
+nav {
+    height: 100px;
+    width: 100%;
+    background-color: $bgColorSweetPink;
+
+    #icon{
+        color: $bgColorWhite;
+        font-size: 30px;
+        line-height: 100px;
+        margin-left: 40px;
+        float: left;
+        cursor: pointer;
+        margin-top: 40px;
+    }
+
+    .logo{
+        height: 100px;
+
+        img{
+            height: 100px;
+            float: center;
+        }
+    }
+    ul{
+        float: left;
+        margin-left: 20%;
+
+        li{
+            display: inline-block;
+            margin: 0 8px;
+            line-height: 100px;
+
+            a{
+                color: $bgColorWhite;
+                font-size: 18px;
+                border: 2px solid transparent;
+                border-radius: 4px ;
+                padding: 7px 10px;
+                text-decoration: none;
+
+                &:hover{
+                    border: 1px solid $bgColorWhite;
+                    transition: .5s;
+                    color: $bgColorWhite;
+                    
+                }
+
+            }
+            .active{
+                border: 1px solid $bgColorWhite
+                
                 
             }
         }
