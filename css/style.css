@@ -3,53 +3,63 @@
   margin: 0;
   text-decoration: none;
   list-style: none;
+  box-sizing: border-box;
 }
 
-nav {
-  height: 100px;
-  width: 100%;
-  background-color: #BFA399;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, #f2f2f2, #BFA399);
+  height: 36vh;
 }
-nav #icon {
-  color: #f2f2f2;
-  font-size: 30px;
-  line-height: 100px;
-  margin-left: 40px;
-  float: left;
-  cursor: pointer;
-  margin-top: 40px;
+.navbar img {
+  height: 200px;
 }
-nav .logo {
-  height: 100px;
+.navbar ul {
+  float: right;
+  margin-right: 25px;
 }
-nav .logo img {
-  height: 100px;
-  float: center;
-}
-nav ul {
-  float: left;
-  margin-left: 20%;
-}
-nav ul li {
+.navbar ul li {
   display: inline-block;
-  margin: 0 8px;
-  line-height: 100px;
+  margin-right: 2rem;
+  list-style: none;
 }
-nav ul li a {
+.navbar ul li .nav-link {
+  color: #f2f2f2;
+}
+.navbar ul li a {
+  position: relative;
   color: #f2f2f2;
   font-size: 18px;
-  border: 2px solid transparent;
-  border-radius: 4px;
-  padding: 7px 10px;
+  text-transform: uppercase;
+  padding: 5px 0;
   text-decoration: none;
 }
-nav ul li a:hover {
-  border: 1px solid #f2f2f2;
-  transition: 0.5s;
-  color: #f2f2f2;
+.navbar ul li a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: #f2f2f2;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s linear;
 }
-nav ul li .active {
-  border: 1px solid #f2f2f2;
+.navbar ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.carrousel-item img {
+  height: 60vh;
+}
+
+.container-fluid .row .col img {
+  height: 50vh;
+  width: 20vw;
 }
 
 /*# sourceMappingURL=style.css.map */

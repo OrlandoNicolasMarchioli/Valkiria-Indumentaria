@@ -5,60 +5,80 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
 
 }
-nav {
-    height: 100px;
-    width: 100%;
-    background-color: $bgColorSweetPink;
 
-    #icon{
-        color: $bgColorWhite;
-        font-size: 30px;
-        line-height: 100px;
-        margin-left: 40px;
-        float: left;
-        cursor: pointer;
-        margin-top: 40px;
-    }
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, $bgColorWhite, $bgColorSweetPink);
+    height: 36vh; 
+    
+    
 
-    .logo{
-        height: 100px;
+    img{
+        height: 200px;    
+    }    
 
-        img{
-            height: 100px;
-            float: center;
-        }
-    }
     ul{
-        float: left;
-        margin-left: 20%;
+        float: right;
+        margin-right: 25px;
 
         li{
-            display: inline-block;
-            margin: 0 8px;
-            line-height: 100px;
-
+            display: inline-block;            
+            margin-right: 2rem;
+            list-style: none;
+            
+            .nav-link{
+                color: $bgColorWhite;
+            }
             a{
+                position: relative;
                 color: $bgColorWhite;
                 font-size: 18px;
-                border: 2px solid transparent;
-                border-radius: 4px ;
-                padding: 7px 10px;
+                text-transform: uppercase;
+                padding: 5px 0;
                 text-decoration: none;
+        
 
-                &:hover{
-                    border: 1px solid $bgColorWhite;
-                    transition: .5s;
-                    color: $bgColorWhite;
-                    
+                &::before{
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: 0;
+                    height: 3px;
+                    width: 100%;
+                    background: $bgColorWhite;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    transition: transform .4s linear;
                 }
-
+                &:hover::before{
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
             }
-            .active{
-                border: 1px solid $bgColorWhite
-                
-                
+        }
+    }
+    
+}
+
+.carrousel-item{
+    
+    img{
+        height: 60vh;
+    }
+}
+
+.container-fluid{
+    .row{
+        .col{
+
+            img{
+                height: 50vh;
+                width: 20vw;
             }
         }
     }
