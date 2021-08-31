@@ -57,7 +57,32 @@
   height: 60vh;
 }
 
-.container-fluid .row .col img {
+.tituloPrincipal {
+  text-align: center;
+  font-size: 5rem;
+  color: #BFA399;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stickers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.stickers .sticker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_fila {
+  margin-bottom: 4rem;
+}
+.container_fila .row .col img {
   height: 50vh;
   width: 20vw;
 }
