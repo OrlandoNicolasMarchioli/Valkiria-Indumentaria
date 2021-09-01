@@ -83,7 +83,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 3rem;
 
     .sticker{
@@ -91,44 +91,76 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+        width: 20vw;
+
+        img{
+            width: 6vw;
+            height: 10vh;
+        }
+        h2{
+            color: $bgColorSweetPink;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        h3{
+            color: $bgColorSweetPink;
+            font-size: 1rem;
+        }
+        .img_wpp{
+            margin-top: 1.5rem;
+            height: 8vh;
+            width: 5vw;
+        }
     }
 }
 
 .container_fila{
-
+    display: flex;
+    flex-flow: row wrap;
     margin-bottom: 2rem;
-    .row{
-        .col{
+    justify-content: space-around;
+    margin-top: 3vh;
+    
+    .col_ropa{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+        height: 100%;
+        width: 23vw;
+        box-shadow: 4px 5px 10px rgba(0,0,0,0.15);
+
+        img{
+            height: 60vh;
+            width: 100%;
+        }
+        h4{
+            color: $bgColorSweetPink;
+            text-align: center;
+        }
+        .col__bolsa{
             display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items:center;
-            height: 70vh;
-            width: 20vw;
-            box-shadow: 0px 3px 3px rgba(0,0,0,0.15);
+            flex-flow: row nowrap;
+            width: 10vw;
+            padding: 5px;
 
-            img{
-                height: 50vh;
-                width: 20vw;
+            h5{
+                height: 1rem;
+                margin-left: 3.7rem;
             }
-            h4{
-                color: $bgColorSweetPink;
-                text-align: center;
-            }
-            .col__bolsa{
-                display: flex;
+            button{
 
-                h5{
-                    height: 1rem;
-                }
-                button{
-                    img{
-                        height: 30px;
-                        width: 30px;
-                    }
+                margin-left: 9.6rem;
+                img{
+                    height: 30px;
+                    width: 30px;
+                    background-color: transparent;
                 }
             }
         }
     }
 }
+
