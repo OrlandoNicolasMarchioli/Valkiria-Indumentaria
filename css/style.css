@@ -127,21 +127,25 @@
 }
 .container_fila .col_ropa .col__bolsa {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   width: 10vw;
   padding: 5px;
+  justify-content: center;
+  align-items: center;
 }
 .container_fila .col_ropa .col__bolsa h5 {
   height: 1rem;
-  margin-left: 3.7rem;
 }
 .container_fila .col_ropa .col__bolsa button {
-  margin-left: 9.6rem;
+  margin-top: 1rem;
+  background-color: #F2DFE0;
+  padding: 0 5px;
+  border-radius: 3px;
+  border: solid 1px transparent;
+  margin-bottom: 1rem;
 }
-.container_fila .col_ropa .col__bolsa button img {
-  height: 30px;
-  width: 30px;
-  background-color: transparent;
+.container_fila .col_ropa .col__bolsa button:hover {
+  transform: scale(1.05, 1.05);
 }
 
 /*# sourceMappingURL=style.css.map */
