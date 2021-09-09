@@ -4,6 +4,7 @@ function Productos(nombre,precio,stock){
     this.nombre = nombre;
     this.precio = precio;
     this.stock = stock;
+    console.log("ejecuta")
 }
 
 
@@ -15,10 +16,10 @@ const producto5 = new Productos("Sweater3 Wolf","$3500",10)
 const producto6 = new Productos("Sweater4 Wolf","$3500",10)
 
 let listaProductos = [producto1, producto2,producto3,producto4,producto5,producto6]
-
-Productos.forEach(producto => {
-    listaProductos +=
-    <div class="card">
+let acumulador = ""
+listaProductos.forEach(producto => {
+    acumulador +=`
+    <div class="card" style="width: 18rem;">
         <img src="../img/productos/index/1.jpeg" class="card__img__top">
         </img>
         <div class= "card__body">
@@ -28,11 +29,12 @@ Productos.forEach(producto => {
             <p class="card-text">Precio: ${producto.precio}</p>
             <p class="card-text">Precio: ${producto.stock}</p>
             <button class = "btn btn-primary"
-                oneclick = "agregarAlCarrito('$(producto.nombre)')">Agregar al carrito
+                onclick = "agregarAlCarrito('$(producto.nombre)')">Agregar al carrito
             </button>
         </div>
-    </div>    
+    </div> 
+`
 })
 const contenedor = document.getElementsByClassName("CarritoDeCompras__ul")
-contenedor.innerHTML = listaProductos 
+contenedor.innerHTML = acumulador 
 
