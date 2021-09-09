@@ -100,6 +100,33 @@
   width: 5vw;
 }
 
+#CarritoDeCompras__ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#CarritoDeCompras__ul .card__body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#CarritoDeCompras__ul .card__body .card__title {
+  color: #BFA399;
+}
+#CarritoDeCompras__ul .card__body .btn {
+  background-color: #BFA399;
+  border: none;
+}
+#CarritoDeCompras__ul .card__body .btn:hover {
+  transition: 0.5s;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+  border: solid 1px #BFA399;
+  background-color: #f2f2f2;
+  color: #BFA399;
+}
+
 .container_fila {
   display: flex;
   flex-flow: row wrap;

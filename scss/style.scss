@@ -115,6 +115,36 @@
         }
     }
 }
+#CarritoDeCompras__ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    .card__body{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        .card__title{
+            color: $bgColorSweetPink;
+        }
+        .btn{
+            background-color: $bgColorSweetPink;
+            border: none;
+
+            &:hover{
+                
+                transition: 0.5s;
+                box-shadow: 3px 3px 3px rgba(0,0,0,0.15);
+                border: solid 1px $bgColorSweetPink;
+                background-color: $bgColorWhite;
+                color: $bgColorSweetPink;
+            }
+        }
+    }
+}
 
 .container_fila{
     display: flex;

@@ -1,12 +1,23 @@
+function enviarAlCarrito(){
+    /* Funcion que recibe el click del usuario y envia el producto al carrito */
 
+    let button = document.getElementsByClassName("boton__compras")
+    button.addEventListener("click", enviarAlCarrito)
+    let li = document.createElement("li")
+    document.CarritoDeCompras__ul.appendChild("li")
+    for(producto of Productos){
+        document.CarritoDeCompras__ul.appendChild("producto")
+    }    
 
+}
+
+/* Objeto productos */
 function Productos(nombre,precio,stock){
     this.nombre = nombre;
     this.precio = precio;
     this.stock = stock;
     console.log("ejecuta")
 }
-
 
 const producto1 = new Productos("Sweater Wolf","$3500",10)
 const producto2 = new Productos("Jean1","$3500",10)
@@ -15,7 +26,10 @@ const producto4 = new Productos("Sweater2 Wolf","$3500",10)
 const producto5 = new Productos("Sweater3 Wolf","$3500",10)
 const producto6 = new Productos("Sweater4 Wolf","$3500",10)
 
+/* Lista de productos */
 let listaProductos = [producto1, producto2,producto3,producto4,producto5,producto6]
+
+/* Estructur que genera una card de producto para agregarlo al html */
 let acumulador = ""
 listaProductos.forEach(producto => {
     acumulador +=`
@@ -27,14 +41,18 @@ listaProductos.forEach(producto => {
                 ${producto.nombre}
             </h5>
             <p class="card-text">Precio: ${producto.precio}</p>
-            <p class="card-text">Precio: ${producto.stock}</p>
+            <p class="card-text">stock: ${producto.stock}</p>
             <button class = "btn btn-primary"
-                onclick = "agregarAlCarrito('$(producto.nombre)')">Agregar al carrito
+                onclick = "enviarAlCarrito('$(producto.nombre)')">Agregar al carrito
             </button>
         </div>
     </div> 
 `
 })
-const contenedor = document.getElementsByClassName("CarritoDeCompras__ul")
+const contenedor = document.getElementById("CarritoDeCompras__ul")
 contenedor.innerHTML = acumulador 
 
+/* Guardo la lista de productos en formato JSON en local storage */
+for(const producto of listaProductos){
+    localStorage.setItem(JSON.stringify(producto), "producto")
+}
