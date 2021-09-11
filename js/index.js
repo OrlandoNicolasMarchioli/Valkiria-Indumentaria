@@ -13,24 +13,46 @@ function enviarAlCarrito(){
 
 /* Objeto productos */
 function Productos(nombre,precio,stock){
+    this.id = id;
     this.nombre = nombre;
     this.precio = precio;
     this.stock = stock;
     console.log("ejecuta")
 }
 
-const producto1 = new Productos("Sweater Wolf","$3500",10)
-const producto2 = new Productos("Jean1","$3500",10)
-const producto3 = new Productos("Jean2 Wolf","$3500",10)
-const producto4 = new Productos("Sweater2 Wolf","$3500",10)
-const producto5 = new Productos("Sweater3 Wolf","$3500",10)
-const producto6 = new Productos("Sweater4 Wolf","$3500",10)
+const producto1 = new Productos(1,"Sweater Wolf","$3500",10)
+const producto2 = new Productos(2,"Jean1","$3500",10)
+const producto3 = new Productos(3,"Jean2 Wolf","$3500",10)
+const producto4 = new Productos(4,"Sweater2 Wolf","$3500",10)
+const producto5 = new Productos(5,"Sweater3 Wolf","$3500",10)
+const producto6 = new Productos(6,"Sweater4 Wolf","$3500",10)
 
 /* Lista de productos */
 let listaProductos = [producto1, producto2,producto3,producto4,producto5,producto6]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Estructur que genera una card de producto para agregarlo al html */
-let acumulador = ""
+/* let acumulador = ""
 listaProductos.forEach(producto => {
     acumulador +=`
     <div class="card" style="width: 18rem;">
@@ -56,3 +78,4 @@ contenedor.innerHTML = acumulador
 for(const producto of listaProductos){
     localStorage.setItem(JSON.stringify(producto), "producto")
 }
+ */
