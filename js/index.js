@@ -30,24 +30,35 @@ const producto6 = new Productos(6,"Sweater4 Wolf","$3500",10)
 /* Lista de productos */
 let listaProductos = [producto1, producto2,producto3,producto4,producto5,producto6]
 
+let button = document.getElementsByClassName("boton__compras")
 
+let lista = document.getElementById("carritoDeCompras__u")
 
+button.addEventListener("click", agregarCarrito)
 
+/* Quiero agregar los objetos en la linea 120 del html */
+function agregarCarrito(){
+    alert("Agregaste un producto al carrito!")
+    for(const producto of listaProductos){
+        if(producto.id == id){
+            <div class="card">
+                <div class="card__body">    
+                    <h5 class="card__title">w
+                        ${producto.nombre}
+                    </h5>
+                    <p class="card-text">Precio: ${producto.precio}</p>
+                    <p class="card-text">stock: ${producto.stock}</p>
+                    <button class = "btn btn-danger"
+                    onclick = "enviarAlCarrito('$(producto.nombre)')">Eliminar
+                    </button>   
+                </div>                
+            </div>
+        }
+    }
+    lista.innerHTML(listaProductos.producto)
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const contenedor = document.getElementById("CarritoDe Compras__ul")
 
 
 
@@ -75,7 +86,6 @@ const contenedor = document.getElementById("CarritoDeCompras__ul")
 contenedor.innerHTML = acumulador 
 
 /* Guardo la lista de productos en formato JSON en local storage */
-for(const producto of listaProductos){
+/* for(const producto of listaProductos){
     localStorage.setItem(JSON.stringify(producto), "producto")
-}
- */
+} */
