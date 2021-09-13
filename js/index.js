@@ -32,14 +32,13 @@ let listaProductos = [producto1, producto2,producto3,producto4,producto5,product
 
 let button = document.getElementsByClassName("boton__compras")
 
-let lista = document.getElementById("carritoDeCompras__u")
-
-button.addEventListener("click", agregarCarrito)
+button.onclick(agregarCarrito)
 
 /* Quiero agregar los objetos en la linea 120 del html */
 function agregarCarrito(){
     alert("Agregaste un producto al carrito!")
     for(const producto of listaProductos){
+        let productoAgregado = [];
         if(producto.id == id){
             <div class="card">
                 <div class="card__body">    
@@ -53,12 +52,14 @@ function agregarCarrito(){
                     </button>   
                 </div>                
             </div>
+            productoAgregado.push(producto)
         }
     }
-    lista.innerHTML(listaProductos.producto)
+    
 }
+let lista = document.getElementById("carritoDeCompras__u")
 
-const contenedor = document.getElementById("CarritoDe Compras__ul")
+lista.innerHTML = productoAgregado
 
 
 
