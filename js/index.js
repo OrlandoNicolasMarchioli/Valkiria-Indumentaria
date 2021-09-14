@@ -62,7 +62,7 @@ const DOMbotonVaciar = document.getElementsById("botonVaciar") */
 let boton = document.getElementById('botonCarrito');
 
 boton.onclick =function(){
-    console.log("click")
-    alert("click")      
+    let carritoDeCompras = document.getElementById("carritoDeCompras");
+    carritoDeCompras.innerHTML = boton
 }
 
