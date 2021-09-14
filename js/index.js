@@ -1,92 +1,68 @@
-function enviarAlCarrito(){
-    /* Funcion que recibe el click del usuario y envia el producto al carrito */
-
-    let button = document.getElementsByClassName("boton__compras")
-    button.addEventListener("click", enviarAlCarrito)
-    let li = document.createElement("li")
-    document.CarritoDeCompras__ul.appendChild("li")
-    for(producto of Productos){
-        document.CarritoDeCompras__ul.appendChild("producto")
-    }    
-
-}
 
 /* Objeto productos */
-function Productos(nombre,precio,stock){
-    this.id = id;
+function Productos(img,nombre,precio){
+    this.img = img;
     this.nombre = nombre;
     this.precio = precio;
-    this.stock = stock;
-    console.log("ejecuta")
+
 }
 
-const producto1 = new Productos(1,"Sweater Wolf","$3500",10)
-const producto2 = new Productos(2,"Jean1","$3500",10)
-const producto3 = new Productos(3,"Jean2 Wolf","$3500",10)
-const producto4 = new Productos(4,"Sweater2 Wolf","$3500",10)
-const producto5 = new Productos(5,"Sweater3 Wolf","$3500",10)
-const producto6 = new Productos(6,"Sweater4 Wolf","$3500",10)
+const producto1 = new Productos("../img/productos/index/1.jpeg","Sweater Wolf","$2000")
+const producto2 = new Productos("../img/productos/index/2.jpeg","Jean 80's Syle","$3500")
+const producto3 = new Productos("../img/productos/index/3.jpeg","Jean light blue","$3200")
+const producto4 = new Productos("../img/productos/jeanRoto2.jpg","Jean Dark blue","$3500")
+const producto5 = new Productos("../img/productos/jeanRotoNegro.jpg","Sweater3 Wolf","$3500")
+const producto6 = new Productos("../img/productos/sweater2.jpg","Sweater4 Wolf","$3500")
+const producto7 = new Productos("../img/productos/combo1.jpg","Sweater4 Wolf","$3500")
+const producto8 = new Productos("../img/productos/combo2.jpg","Sweater4 Wolf","$3500")
+
 
 /* Lista de productos */
-let listaProductos = [producto1, producto2,producto3,producto4,producto5,producto6]
-
-let button = document.getElementsByClassName("boton__compras")
-
-button.onclick(agregarCarrito)
-
-/* Quiero agregar los objetos en la linea 120 del html */
-function agregarCarrito(){
-    alert("Agregaste un producto al carrito!")
-    for(const producto of listaProductos){
-        let productoAgregado = [];
-        if(producto.id == id){
-            <div class="card">
-                <div class="card__body">    
-                    <h5 class="card__title">w
-                        ${producto.nombre}
-                    </h5>
-                    <p class="card-text">Precio: ${producto.precio}</p>
-                    <p class="card-text">stock: ${producto.stock}</p>
-                    <button class = "btn btn-danger"
-                    onclick = "enviarAlCarrito('$(producto.nombre)')">Eliminar
-                    </button>   
-                </div>                
-            </div>
-            productoAgregado.push(producto)
-        }
-    }
-    
-}
-let lista = document.getElementById("carritoDeCompras__u")
-
-lista.innerHTML = productoAgregado
-
+let listaProductos = [producto1, producto2,producto3,producto4,producto5,producto6,producto7,producto8]
 
 
 /* Estructur que genera una card de producto para agregarlo al html */
-/* let acumulador = ""
+let acumulador = ""
 listaProductos.forEach(producto => {
     acumulador +=`
-    <div class="card" style="width: 18rem;">
-        <img src="../img/productos/index/1.jpeg" class="card__img__top">
+    <div id="producto" class="col_ropa">
+        <img src="${producto.img}" alt="">
         </img>
-        <div class= "card__body">
-            <h5 class ="card__title">
+        <h4 class ="card__title">
                 ${producto.nombre}
-            </h5>
-            <p class="card-text">Precio: ${producto.precio}</p>
-            <p class="card-text">stock: ${producto.stock}</p>
-            <button class = "btn btn-primary"
+        </h4>
+        <div class= "col__bolsa">
+            <h5><b>${producto.precio}</b></h5>            
+            <button id="botonCarrito" class = "boton__compras"
                 onclick = "enviarAlCarrito('$(producto.nombre)')">Agregar al carrito
             </button>
         </div>
     </div> 
 `
 })
-const contenedor = document.getElementById("CarritoDeCompras__ul")
+const contenedor = document.getElementById("containerProductos")
 contenedor.innerHTML = acumulador 
 
 /* Guardo la lista de productos en formato JSON en local storage */
 /* for(const producto of listaProductos){
     localStorage.setItem(JSON.stringify(producto), "producto")
 } */
+
+/* Aca comienza el carrito de compras */
+
+/* let carrito = []
+let total = 0
+const DOMitems = document.getElementById("producto")
+const DOMcarrito = document.getElementById("carritoDeCompras")
+const DOMtotal = document.getElementById("total")
+const DOMbotonVaciar = document.getElementsById("botonVaciar") */
+
+/* Funcion que capta los click sobre el boton de agregar carrito */
+
+let boton = document.getElementById('botonCarrito');
+
+boton.onclick =function(){
+    console.log("click")
+    alert("click")      
+}
+

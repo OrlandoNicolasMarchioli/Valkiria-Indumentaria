@@ -143,6 +143,7 @@
   height: 100%;
   width: 23vw;
   box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
 }
 .container_fila .col_ropa img {
   height: 60vh;
@@ -164,15 +165,19 @@
   height: 1rem;
 }
 .container_fila .col_ropa .col__bolsa button {
+  background-color: #BFA399;
+  border: solid 1px;
+  color: #f2f2f2;
   margin-top: 1rem;
-  background-color: #F2DFE0;
-  padding: 0 5px;
-  border-radius: 3px;
-  border: solid 1px transparent;
   margin-bottom: 1rem;
+  padding: 4px 5px;
 }
 .container_fila .col_ropa .col__bolsa button:hover {
-  transform: scale(1.05, 1.05);
+  transition: 0.5s;
+  /* box-shadow: 3px 3px 3px rgba(0,0,0,0.15); */
+  border: solid 1px #BFA399;
+  background-color: #f2f2f2;
+  color: #BFA399;
 }
 
 /*# sourceMappingURL=style.css.map */
