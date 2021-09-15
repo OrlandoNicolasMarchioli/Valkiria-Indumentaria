@@ -37,32 +37,20 @@ listaProductos.forEach(producto => {
                 onclick = "enviarAlCarrito('$(producto.nombre)')">Agregar al carrito
             </button>
         </div>
-    </div> 
+    </div>     
 `
 })
 const contenedor = document.getElementById("containerProductos")
 contenedor.innerHTML = acumulador 
 
-/* Guardo la lista de productos en formato JSON en local storage */
-/* for(const producto of listaProductos){
-    localStorage.setItem(JSON.stringify(producto), "producto")
-} */
 
-/* Aca comienza el carrito de compras */
+let carrito = []
 
-/* let carrito = []
 let total = 0
-const DOMitems = document.getElementById("producto")
-const DOMcarrito = document.getElementById("carritoDeCompras")
-const DOMtotal = document.getElementById("total")
-const DOMbotonVaciar = document.getElementsById("botonVaciar") */
 
-/* Funcion que capta los click sobre el boton de agregar carrito */
-
-let boton = document.getElementById('botonCarrito');
-
-boton.onclick =function(){
-    let carritoDeCompras = document.getElementById("carritoDeCompras");
-    carritoDeCompras.innerHTML = boton
-}
-
+let boton = document.querySelector("#botonCarrito");
+    boton.addEventListener("click", (e)=>{
+        const contenedor = querySelector("#carritoDeCompras")
+        carrito.push(e.target)
+        contenedor.innerHTML = carrito
+    })
