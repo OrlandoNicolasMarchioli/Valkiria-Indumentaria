@@ -43,14 +43,24 @@ listaProductos.forEach(producto => {
 const contenedor = document.getElementById("containerProductos")
 contenedor.innerHTML = acumulador 
 
+let boton = document.getElementById("botonCarrito");
+    boton.addEventListener("click", agregarCarrito)
+    
+function agregarCarrito(){
+    carrito = document.getElementById("carritoDeCompras")
+    carrito.innerHTML = card();
+}
 
-let carrito = []
+function card(){
+    for(const producto of listaProductos){
+        let nombreProducto = document.createElement("h5");
+        nombreProducto.classList.add('card-title')
+        nombreProducto = producto.nombre
 
-let total = 0
+        let precioProducto = document.createElement('h6');
+        precioProducto.classList.add('card-price')
+        precioProducto = producto.precio
+    }
+}
 
-let boton = document.querySelector("#botonCarrito");
-    boton.addEventListener("click", (e)=>{
-        const contenedor = querySelector("#carritoDeCompras")
-        carrito.push(e.target)
-        contenedor.innerHTML = carrito
-    })
+
