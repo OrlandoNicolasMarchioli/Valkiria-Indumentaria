@@ -34,33 +34,39 @@ listaProductos.forEach(producto => {
         <div class= "col__bolsa">
             <h5><b>${producto.precio}</b></h5>            
             <button id="botonCarrito" class = "boton__compras"
-                onclick = "enviarAlCarrito('$(producto.nombre)')">Agregar al carrito
+                onclick = "enviarAlCarrito('$(producto.nombre)')">Comprar
             </button>
         </div>
     </div>     
-`
+`   
+
 })
 const contenedor = document.getElementById("containerProductos")
 contenedor.innerHTML = acumulador 
 
+
+let precioTotal = 0;
+
+/* Botones y funciones */
 let boton = document.getElementById("botonCarrito");
     boton.addEventListener("click", agregarCarrito)
     
+let total = 0
 function agregarCarrito(){
-    carrito = document.getElementById("carritoDeCompras")
-    carrito.innerHTML = card();
+    const encontrar = listaProductos.find(producto => producto.nombre);
+    encontrar = document.createElement('h5');
+    encontrar.classList.add('productoComprado');
+    const precio = listaProductos.find(producto => producto.precio);
+    precio  = document.createElement('h6');
+    precio.classList.add('productoprecio');
+    total += producto.precio;
+
+    let carro = document.getElementById('carritoDeCompras')
+    carro.innerHTML = encontrar;
+    carro.innerHTML = precio;
+    carro.innerHTML = total;
+
 }
 
-function card(){
-    for(const producto of listaProductos){
-        let nombreProducto = document.createElement("h5");
-        nombreProducto.classList.add('card-title')
-        nombreProducto = producto.nombre
-
-        let precioProducto = document.createElement('h6');
-        precioProducto.classList.add('card-price')
-        precioProducto = producto.precio
-    }
-}
 
 
