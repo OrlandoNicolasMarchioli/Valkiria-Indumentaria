@@ -146,6 +146,62 @@
     }
 }
 
+/* Enlaces de pagina principal */
+#section__enlaces{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    .containerEnlace1{
+        display: flex;
+        flex-flow: row wrap;
+
+        .enlace1{
+            .enlaceImg{
+                width: 40vw;
+                height: 80vh;
+            }
+        }
+    
+    }
+
+    .containerEnlace2-3-4{
+        display: flex;
+        flex-flow: column wrap;
+
+        .enlace2{
+            text-align: center;
+
+            .enlaceImg{
+                width: 50vw;
+                height: 30vh;
+            }
+        }
+        .container{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        
+            .enlace3{
+                .enlaceImg{
+                    width: 25vw;
+                    height: 43.5vh;
+                }
+            }
+            .enlace4{
+                .enlaceImg{
+                    width: 25vw;
+                    height: 43.5vh;
+                }
+            }
+        }
+    }
+    
+
+}
+
+
+/* Ropa */
 .container_fila{
     display: flex;
     flex-flow: row wrap;
@@ -205,3 +261,27 @@
     }
 }
 
+.footer{
+    height: 40vh;
+    width: 100vw;
+    background-color: $bgColorSweetPink;
+
+    .redesSociales{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .enlacesFooter{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .enlacesContactoFooter{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

@@ -64,8 +64,7 @@ function agregarCarrito(){
     let carro = document.getElementById('carritoDeCompras')
     carro.innerHTML = encontrar;
     carro.innerHTML = precio;
-    carro.innerHTML = total;
-
+    carro.innerHTML = total; 
 }
 
 

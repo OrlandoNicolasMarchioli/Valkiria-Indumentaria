@@ -127,6 +127,46 @@
   color: #BFA399;
 }
 
+/* Enlaces de pagina principal */
+#section__enlaces {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+#section__enlaces .containerEnlace1 {
+  display: flex;
+  flex-flow: row wrap;
+}
+#section__enlaces .containerEnlace1 .enlace1 .enlaceImg {
+  width: 40vw;
+  height: 80vh;
+}
+#section__enlaces .containerEnlace2-3-4 {
+  display: flex;
+  flex-flow: column wrap;
+}
+#section__enlaces .containerEnlace2-3-4 .enlace2 {
+  text-align: center;
+}
+#section__enlaces .containerEnlace2-3-4 .enlace2 .enlaceImg {
+  width: 50vw;
+  height: 30vh;
+}
+#section__enlaces .containerEnlace2-3-4 .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#section__enlaces .containerEnlace2-3-4 .container .enlace3 .enlaceImg {
+  width: 25vw;
+  height: 43.5vh;
+}
+#section__enlaces .containerEnlace2-3-4 .container .enlace4 .enlaceImg {
+  width: 25vw;
+  height: 43.5vh;
+}
+
+/* Ropa */
 .container_fila {
   display: flex;
   flex-flow: row wrap;
@@ -178,6 +218,28 @@
   border: solid 1px #BFA399;
   background-color: #f2f2f2;
   color: #BFA399;
+}
+
+.footer {
+  height: 40vh;
+  width: 100vw;
+  background-color: #BFA399;
+}
+.footer .redesSociales {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.footer .enlacesFooter {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.footer .enlacesContactoFooter {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
