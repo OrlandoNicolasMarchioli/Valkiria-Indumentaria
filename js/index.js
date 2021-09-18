@@ -33,8 +33,8 @@ listaProductos.forEach(producto => {
         </h4>
         <div class= "col__bolsa">
             <h5><b>${producto.precio}</b></h5>            
-            <button class="botonCarrito" class = "boton__compras"
-                onclick = "agregarCarrito('$(producto.nombre)')">Comprar
+            <button class="botonCarrito boton__compras"
+                onclick = "agregarCarrito(${producto.nombre})">Comprar
             </button>
         </div>
     </div>     
