@@ -33,8 +33,8 @@ listaProductos.forEach(producto => {
         </h4>
         <div class= "col__bolsa">
             <h5><b>${producto.precio}</b></h5>            
-            <button id="botonCarrito" class = "boton__compras"
-                onclick = "enviarAlCarrito('$(producto.nombre)')">Comprar
+            <button class="botonCarrito" class = "boton__compras"
+                onclick = "agregarCarrito('$(producto.nombre)')">Comprar
             </button>
         </div>
     </div>     
@@ -44,27 +44,20 @@ listaProductos.forEach(producto => {
 const contenedor = document.getElementById("containerProductos")
 contenedor.innerHTML = acumulador 
 
-
 let precioTotal = 0;
-
 /* Botones y funciones */
-let boton = document.getElementById("botonCarrito");
-    boton.addEventListener("click", agregarCarrito)
-    
+let boton = document.getElementsByClassName("botonCarrito");
+
 let total = 0
-function agregarCarrito(){
-    const encontrar = listaProductos.find(producto => producto.nombre);
-    encontrar = document.createElement('h5');
-    encontrar.classList.add('productoComprado');
-    const precio = listaProductos.find(producto => producto.precio);
-    precio  = document.createElement('h6');
-    precio.classList.add('productoprecio');
-    total += producto.precio;
+function agregarCarrito(seleccion){
+    let encontrado = listaProductos.find(producto => producto.nombre == seleccion);
+    const card = `<h5 class="productoComprado">${encontrado.nombre}</h5>
+                <h6 class="productoprecio">${encontrado.precio}</h6>
+                <p>Precio total: ${total+= encontrado.precio}</p>`
+    console.log(encontrado)
 
     let carro = document.getElementById('carritoDeCompras')
-    carro.innerHTML = encontrar;
-    carro.innerHTML = precio;
-    carro.innerHTML = total; 
+    carro.innerHTML += card
 }
 
 

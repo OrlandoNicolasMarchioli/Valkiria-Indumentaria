@@ -166,6 +166,17 @@
   height: 43.5vh;
 }
 
+/* Titulo pagina principal */
+.title {
+  text-align: center;
+  color: #BFA399;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.title h2 {
+  font-size: 4rem;
+}
+
 /* Ropa */
 .container_fila {
   display: flex;

@@ -200,6 +200,17 @@
 
 }
 
+/* Titulo pagina principal */
+
+.title{
+    text-align: center;
+    color : $bgColorSweetPink;
+    margin-top: 2rem;
+    margin-bottom: 2rem;    
+    h2{
+        font-size: 4rem;
+    }
+}
 
 /* Ropa */
 .container_fila{
