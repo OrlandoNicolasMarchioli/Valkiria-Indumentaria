@@ -17,50 +17,115 @@
     height: 36vh; 
     
     
-
-    img{
-        height: 200px;    
-    }    
-
-    ul{
-        float: right;
-        margin-right: 25px;
-
-        li{
-            display: inline-block;            
-            margin-right: 2rem;
-            list-style: none;
-            
-            .nav-link{
+    .brand-title{
+        img{
+            height: 200px;
+            @media (max-width: 520px) {
+                display: none;
+                
+            }    
+        }
+        .brand-p{
+            display: none;
+            @media (max-width: 520px) {
+                display: block;
+                font-size: 3rem;
+                font-style: italic;
                 color: $bgColorWhite;
-            }
-            a{
-                position: relative;
-                color: $bgColorWhite;
-                font-size: 18px;
-                text-transform: uppercase;
-                padding: 5px 0;
-                text-decoration: none;
-        
+                position: fixed top;
 
-                &::before{
-                    position: absolute;
-                    content: "";
-                    left: 0;
-                    bottom: 0;
-                    height: 3px;
-                    width: 100%;
-                    background: $bgColorWhite;
-                    transform: scaleX(0);
-                    transform-origin: right;
-                    transition: transform .4s linear;
-                }
-                &:hover::before{
-                    transform: scaleX(1);
-                    transform-origin: left;
-                }
             }
         }
+    }
+    .toggle-button{
+        position: absolute;
+        top:  .75rem;
+        right: 1rem;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+
+        .bar{
+            height: 3px;
+            width: 100%;
+            background-color: $bgColorWhite;
+            border-radius: 10px;
+        }
+        @media (max-width: 520px) {            
+            display: flex;            
+        }
+    }    
+
+    .navbar-links{
+        ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+            li{
+                list-style: none;                
+                a{
+                    display: block;
+                    position: relative;
+                    color: $bgColorWhite;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    padding: 5px 0;
+                    text-decoration: none;
+            
+
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        bottom: 0;
+                        height: 3px;
+                        width: 100%;
+                        background: $bgColorWhite;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform .4s linear;
+                    }
+                    &:hover::before{
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                    @media (max-width: 520px) {
+                        padding: .5rem 1rem;
+                    }
+                }
+                @media (max-width: 520px) {
+                    text-align: center;
+                    width: 50vw;
+                    
+                }
+            }
+            @media (max-width: 520px) {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+        }
+        @media (max-width: 520px) {
+            display: none;
+            width: 100%;
+        }
+        
+    }
+    @media (max-width: 520px) {        
+        flex-direction: column;
+        align-items: center;
+        height: 15vh;
+        justify-content: center;
+        
+
+    }
+    .navbar-links.active{
+        @media (max-width: 520px) {
+            display: flex;
+    }
     }
     
 }

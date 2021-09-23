@@ -13,22 +13,57 @@
   background-image: linear-gradient(to right, #f2f2f2, #BFA399);
   height: 36vh;
 }
-.navbar img {
+.navbar .brand-title img {
   height: 200px;
 }
-.navbar ul {
-  float: right;
-  margin-right: 25px;
+@media (max-width: 520px) {
+  .navbar .brand-title img {
+    display: none;
+  }
 }
-.navbar ul li {
-  display: inline-block;
-  margin-right: 2rem;
+.navbar .brand-title .brand-p {
+  display: none;
+}
+@media (max-width: 520px) {
+  .navbar .brand-title .brand-p {
+    display: block;
+    font-size: 3rem;
+    font-style: italic;
+    color: #f2f2f2;
+    position: fixed top;
+  }
+}
+.navbar .toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.navbar .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+@media (max-width: 520px) {
+  .navbar .toggle-button {
+    display: flex;
+  }
+}
+.navbar .navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar .navbar-links ul li {
   list-style: none;
 }
-.navbar ul li .nav-link {
-  color: #f2f2f2;
-}
-.navbar ul li a {
+.navbar .navbar-links ul li a {
+  display: block;
   position: relative;
   color: #f2f2f2;
   font-size: 18px;
@@ -36,7 +71,7 @@
   padding: 5px 0;
   text-decoration: none;
 }
-.navbar ul li a::before {
+.navbar .navbar-links ul li a::before {
   position: absolute;
   content: "";
   left: 0;
@@ -48,9 +83,46 @@
   transform-origin: right;
   transition: transform 0.4s linear;
 }
-.navbar ul li a:hover::before {
+.navbar .navbar-links ul li a:hover::before {
   transform: scaleX(1);
   transform-origin: left;
+}
+@media (max-width: 520px) {
+  .navbar .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+}
+@media (max-width: 520px) {
+  .navbar .navbar-links ul li {
+    text-align: center;
+    width: 50vw;
+  }
+}
+@media (max-width: 520px) {
+  .navbar .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+}
+@media (max-width: 520px) {
+  .navbar .navbar-links {
+    display: none;
+    width: 100%;
+  }
+}
+@media (max-width: 520px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: 15vh;
+    justify-content: center;
+  }
+}
+@media (max-width: 520px) {
+  .navbar .navbar-links.active {
+    display: flex;
+  }
 }
 
 .carrousel-item img {
