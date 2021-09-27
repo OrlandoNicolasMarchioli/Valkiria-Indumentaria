@@ -4,11 +4,6 @@
         <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap" rel="stylesheet"> 
     <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -74,10 +69,58 @@
                 <li><a href="#">PRODUCTOS</a></li>
                 <li><a href="#">NOSOTRAS</a></li>
                 <li><a href="#">CONTACTO</a></li>
+                <li>
+                  <button class="navbar-button" id="botonCarrito">
+                    <img src="img/carro-removebg-preview.png" alt="">
+                  </button>
+                </li>
               </ul>
             </div>
           </nav>
 
+          <!-- Inicio slider -->
+
+          <section class="slider">
+            <div class="slider__container">
+              <img src="assets/leftArrow.svg" class="slider__arrow" id="before"></img>
+              <section class="slider__body slider__body--show" data-id="1">
+                <section class="slider__texts">
+                  <h2 class="subtitle">subtitulo1</h2>
+                  <p class="slider__review">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quam dolore harum.
+                  </p>
+                </section>
+                <figure class="slider__picture">
+                    <img src="img/carrousel/foto2.jpg" alt="" class="slider__img">
+                </figure>
+              </section>
+
+              <section class="slider__body" data-id="2">
+                <section class="slider__texts">
+                  <h2 class="subtitle">subtitulo1</h2>
+                  <p class="slider__review">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quam dolore harum.
+                  </p>
+                </section>
+                <figure class="slider__picture">
+                    <img src="img/carrousel/foto3.jpg" alt="" class="slider__img">
+                </figure>
+              </section>
+
+              <section class="slider__body" data-id="3">
+                <section class="slider__texts">
+                  <h2 class="subtitle">subtitulo1</h2>
+                  <p class="slider__review">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quam dolore harum.
+                  </p>
+                </section>
+                <figure class="slider__picture">
+                    <img src="img/carrousel/foto1.jpg" alt="" class="slider__img">
+                </figure>
+              </section>
+              <img src="assets/rightArrow.svg" class="slider__arrow" id="after"></img>
+            </div>
+          </section>
           <!-- Fin de nav bar -->
           <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -138,10 +181,6 @@
               <h3>1511111111</h3>
             </div>
           </div>    
-
-          <div id="carritoDeCompras" class="carrito">
-            <!-- Aca se encuentran ingresados los objetos comprados -->
-          </div>
 
           <!-- Enlaces de pagina -->
           <div id="section__enlaces">
