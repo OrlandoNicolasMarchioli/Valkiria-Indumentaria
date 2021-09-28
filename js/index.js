@@ -97,32 +97,42 @@ $("#botonCarrito").click( ()=> {
 
 /* Carrousel */
 
-/* function slider(){
-    const sliders = [...document.querySelector(".slider__body")];
-    const arrowAfter = document.querySelector("#after")
-    const arrowBefore = document.querySelector("#before")
-    let value = 0;
-    console.log(value)
-    arrowAfter.addEventListener("click", () => changePosition(1))
-    arrowBefore.addEventListener("click", () => changePosition(-1))
+/* Carrousel */
 
-    function changePosition(change){
-        const currentElement = Number(document.querySelector(".slider__body--show").dataset.id);
 
-        value = currentElement;
-        value += change;
-        
-        if(value === 0 || value == sliders.length+1){
-            value = value === 0 ? sliders.length :1;
-        }
-        sliders[currentElement -1].classList.toggle("slider__body--show");
-        sliders[value-1].classList.toggle("slider__body--show");
-        
+
+function slider(){
+    let contador = 1
+    console.log(contador)
+    $("#before").click(()=>{
+        contador -= 1;
+    })
+    $("#after").click(()=>{
+        contador += 1;
+    })
+
+    if(contador == 4){
+        contador -= 3
     }
+
+    else if(contador == -1){
+        contador += 4
+    }
+
+    else if (contador == 1){
+        $("#img1").fadeIn(1000)
+    }
+    else if (contador == 2){
+        $("#img2").fadeIn(1500)
+    }
+    else if (contador == 3){
+        $("#img3").fadeIn(2000)
+    }
+
 }
 
-slider()
- */
+slider();
+
 
 /* efectos enlaces */
 
