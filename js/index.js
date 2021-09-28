@@ -32,7 +32,7 @@ listaProductos.forEach(producto => {
                 ${producto.nombre}
         </h4>
         <div class= "col__bolsa">
-            <h5><b>${producto.precio}</b></h5>            
+            <h5><b>$ ${producto.precio}</b></h5>            
             <button class="botonCarrito boton__compras"
                 onclick = "agregarCarrito('${producto.nombre}')">Comprar
             </button>
@@ -49,6 +49,8 @@ let precioTotal = 0;
 let boton = document.getElementsByClassName("botonCarrito");
 
 let total = 0
+
+/* Boton que agrega al carrito de */
 function agregarCarrito(seleccion){
     let encontrado = listaProductos.find(producto => producto.nombre == seleccion);
     const card = `
@@ -64,9 +66,6 @@ function agregarCarrito(seleccion){
 }
 
 
-
-
-
 /* Nav bar */
 
 const toggleButton = document.getElementsByClassName("toggle-button")[0]
@@ -76,9 +75,29 @@ toggleButton.addEventListener("click", ()=> {
     navbarLinks.classList.toggle("active")
 }) 
 
+/* acciones carrito de compra */
+let contadorCarrito = 0
+$("#botonCarrito").click( ()=> {
+    console.log(boton)
+    if (contadorCarrito == 0){
+        $("#carritoContainer").css({
+            "display":"flex",
+            "background-color": "white"
+        })
+        $("#carritoContainer").show("slow");
+        contadorCarrito += 1
+    }
+    else if (contadorCarrito > 0){
+        $("#carritoContainer").hide("slow");
+        contadorCarrito -= 1
+    }
+})
+
+/* Fin acciones boton carrito */
+
 /* Carrousel */
 
-(function(){
+/* function slider(){
     const sliders = [...document.querySelector(".slider__body")];
     const arrowAfter = document.querySelector("#after")
     const arrowBefore = document.querySelector("#before")
@@ -100,9 +119,19 @@ toggleButton.addEventListener("click", ()=> {
         sliders[value-1].classList.toggle("slider__body--show");
         
     }
+}
+
+slider()
+ */
+
+/* efectos enlaces */
+
+$(window).scroll(function(){
+    let pixel = $(window).scrollTop()
+    console.log(pixel)
+    if (500 < pixel <= 600){
+        $("#containerEnlace1").fadeIn(1500);
+        $("#containerEnlace2-3-4").fadeIn(1500);
+    }
 })
-
-/* const buttonPrev = document.get */
-
-
 

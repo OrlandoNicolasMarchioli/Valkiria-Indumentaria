@@ -279,36 +279,7 @@
         }
     }
 }
-#CarritoDeCompras__ul{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    
-    .card__body{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
 
-        .card__title{
-            color: $bgColorSweetPink;
-        }
-        .btn{
-            background-color: $bgColorSweetPink;
-            border: none;
-
-            &:hover{
-                
-                transition: 0.5s;
-                box-shadow: 3px 3px 3px rgba(0,0,0,0.15);
-                border: solid 1px $bgColorSweetPink;
-                background-color: $bgColorWhite;
-                color: $bgColorSweetPink;
-            }
-        }
-    }
-}
 
 /* Enlaces de pagina principal */
 #section__enlaces{
@@ -317,7 +288,7 @@
     justify-content: space-around;
 
     .containerEnlace1{
-        display: flex;
+        display: none;
         flex-flow: row wrap;
 
         .enlace1{
@@ -401,10 +372,12 @@
         img{
             height: 60vh;
             width: 100%;
+            
         }
         h4{
             color: $bgColorSweetPink;
             text-align: center;
+            margin-top: 1rem;
         }
         .col__bolsa{
             display: flex;
@@ -438,6 +411,8 @@
         }
     }
 }
+
+
 
 .footer{
     height: 40vh;
