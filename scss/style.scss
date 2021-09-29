@@ -292,9 +292,41 @@
         flex-flow: row wrap;
 
         .enlace1{
-            .enlaceImg{
-                width: 40vw;
-                height: 80vh;
+            width: 40vw;
+            height: 80vh;
+            background-image: url(/img/productos/jeanRoto.jpg);
+            background-size: 100%;
+            object-fit: cover;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.8;
+
+            .titleEnlace{        
+                text-align: center;
+                font-size: 6rem;
+                color: $bgColorWhite;
+                
+            }
+            .botonEnlace{
+                background-color: transparent;
+                padding: 10px 20px;
+                color: $bgColorWhite;
+                border-radius: 40px;
+                border: 2.5px solid $bgColorWhite;
+
+                &:hover{
+                    background-color: $bgColorWhite;
+                    color: black;
+                    transition: .5s;
+                }
+                
+            }
+            &:hover{
+                opacity: 1;
+                transition: .6s;
+                transform:translate(1.05,1.05)
             }
         }
     
@@ -306,30 +338,122 @@
 
         .enlace2{
             text-align: center;
+            background-image: url(/img/productos/sweater.jpg);
+            background-size: 100%;
+            width: 50vw;
+            height: 30vh;
+            object-fit: cover;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.8;
 
-            .enlaceImg{
-                width: 50vw;
-                height: 30vh;
-                object-fit: cover;
+            .titleEnlace2{        
+                text-align: center;
+                font-size: 4rem;
+                color: $bgColorWhite;
+                
+            }
+            
+            .botonEnlace{
+                background-color: transparent;
+                padding: 10px 20px;
+                color: $bgColorWhite;
+                border-radius: 40px;
+                border: 2.5px solid $bgColorWhite;
+
+                &:hover{
+                    background-color: $bgColorWhite;
+                    color: black;
+                    transition: .5s;
+                }
+                
+                
+            }
+            &:hover{
+                opacity: 1;
+                transition: .6s;
             }
         }
         .container{
+            margin-top: 2.8rem;
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
         
             .enlace3{
-                .enlaceImg{
-                    width: 25vw;
-                    height: 43.5vh;
-                    object-fit: cover;
+                width: 25vw;
+                height: 43.5vh;
+                object-fit: cover;
+                background-image: url(/img/productos/chaleco.jpg);
+                background-size: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                opacity: 0.8;
+                
+                .titleEnlace{        
+                    text-align: center;
+                    font-size: 4rem;
+                    color: $bgColorWhite;
+                    
+                }
+                .botonEnlace{
+                    background-color: transparent;
+                    padding: 10px 20px;
+                    color: $bgColorWhite;
+                    border-radius: 40px;
+                    border: 2.5px solid $bgColorWhite;
+    
+                    &:hover{
+                        background-color: $bgColorWhite;
+                        color: black;
+                        transition: .5s;
+                    }
+                    
+                }
+                &:hover{
+                    opacity: 1;
+                    transition: .6s;
                 }
             }
             .enlace4{
-                .enlaceImg{
-                    width: 25vw;
-                    height: 43.5vh;
-                    object-fit: cover;
+                width: 25vw;
+                height: 43.5vh;
+                object-fit: cover;
+                background-image: url(/img/productos/combo1.jpg);
+                background-size: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                opacity: 0.8;
+                
+                .titleEnlace{        
+                    text-align: center;
+                    font-size: 4rem;
+                    color: $bgColorWhite;
+                    
+                }
+                .botonEnlace{
+                    background-color: transparent;
+                    padding: 10px 20px;
+                    color: $bgColorWhite;
+                    border-radius: 40px;
+                    border: 2.5px solid $bgColorWhite;
+    
+                    &:hover{
+                        background-color: $bgColorWhite;
+                        color: black;
+                        transition: .5s;
+                    }
+                    
+                }
+                &:hover{
+                    opacity: 1;
+                    transition: .6s;
                 }
             }
         }
@@ -484,9 +608,12 @@
 
 
 .footer{
-    height: 40vh;
+    height: 35vh;
     width: 100vw;
     background-color: $bgColorSweetPink;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
 
     .redesSociales{
         display: flex;

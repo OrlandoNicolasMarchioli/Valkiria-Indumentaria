@@ -267,9 +267,39 @@
   display: none;
   flex-flow: row wrap;
 }
-#section__enlaces .containerEnlace1 .enlace1 .enlaceImg {
+#section__enlaces .containerEnlace1 .enlace1 {
   width: 40vw;
   height: 80vh;
+  background-image: url(/img/productos/jeanRoto.jpg);
+  background-size: 100%;
+  object-fit: cover;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+#section__enlaces .containerEnlace1 .enlace1 .titleEnlace {
+  text-align: center;
+  font-size: 6rem;
+  color: #f2f2f2;
+}
+#section__enlaces .containerEnlace1 .enlace1 .botonEnlace {
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #f2f2f2;
+  border-radius: 40px;
+  border: 2.5px solid #f2f2f2;
+}
+#section__enlaces .containerEnlace1 .enlace1 .botonEnlace:hover {
+  background-color: #f2f2f2;
+  color: black;
+  transition: 0.5s;
+}
+#section__enlaces .containerEnlace1 .enlace1:hover {
+  opacity: 1;
+  transition: 0.6s;
+  transform: translate(1.05, 1.05);
 }
 #section__enlaces .containerEnlace2-3-4 {
   display: none;
@@ -277,26 +307,109 @@
 }
 #section__enlaces .containerEnlace2-3-4 .enlace2 {
   text-align: center;
-}
-#section__enlaces .containerEnlace2-3-4 .enlace2 .enlaceImg {
+  background-image: url(/img/productos/sweater.jpg);
+  background-size: 100%;
   width: 50vw;
   height: 30vh;
   object-fit: cover;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+#section__enlaces .containerEnlace2-3-4 .enlace2 .titleEnlace2 {
+  text-align: center;
+  font-size: 4rem;
+  color: #f2f2f2;
+}
+#section__enlaces .containerEnlace2-3-4 .enlace2 .botonEnlace {
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #f2f2f2;
+  border-radius: 40px;
+  border: 2.5px solid #f2f2f2;
+}
+#section__enlaces .containerEnlace2-3-4 .enlace2 .botonEnlace:hover {
+  background-color: #f2f2f2;
+  color: black;
+  transition: 0.5s;
+}
+#section__enlaces .containerEnlace2-3-4 .enlace2:hover {
+  opacity: 1;
+  transition: 0.6s;
 }
 #section__enlaces .containerEnlace2-3-4 .container {
+  margin-top: 2.8rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
-#section__enlaces .containerEnlace2-3-4 .container .enlace3 .enlaceImg {
+#section__enlaces .containerEnlace2-3-4 .container .enlace3 {
   width: 25vw;
   height: 43.5vh;
   object-fit: cover;
+  background-image: url(/img/productos/chaleco.jpg);
+  background-size: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
 }
-#section__enlaces .containerEnlace2-3-4 .container .enlace4 .enlaceImg {
+#section__enlaces .containerEnlace2-3-4 .container .enlace3 .titleEnlace {
+  text-align: center;
+  font-size: 4rem;
+  color: #f2f2f2;
+}
+#section__enlaces .containerEnlace2-3-4 .container .enlace3 .botonEnlace {
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #f2f2f2;
+  border-radius: 40px;
+  border: 2.5px solid #f2f2f2;
+}
+#section__enlaces .containerEnlace2-3-4 .container .enlace3 .botonEnlace:hover {
+  background-color: #f2f2f2;
+  color: black;
+  transition: 0.5s;
+}
+#section__enlaces .containerEnlace2-3-4 .container .enlace3:hover {
+  opacity: 1;
+  transition: 0.6s;
+}
+#section__enlaces .containerEnlace2-3-4 .container .enlace4 {
   width: 25vw;
   height: 43.5vh;
   object-fit: cover;
+  background-image: url(/img/productos/combo1.jpg);
+  background-size: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+#section__enlaces .containerEnlace2-3-4 .container .enlace4 .titleEnlace {
+  text-align: center;
+  font-size: 4rem;
+  color: #f2f2f2;
+}
+#section__enlaces .containerEnlace2-3-4 .container .enlace4 .botonEnlace {
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #f2f2f2;
+  border-radius: 40px;
+  border: 2.5px solid #f2f2f2;
+}
+#section__enlaces .containerEnlace2-3-4 .container .enlace4 .botonEnlace:hover {
+  background-color: #f2f2f2;
+  color: black;
+  transition: 0.5s;
+}
+#section__enlaces .containerEnlace2-3-4 .container .enlace4:hover {
+  opacity: 1;
+  transition: 0.6s;
 }
 
 /* Titulo pagina principal */
@@ -422,9 +535,12 @@
 }
 
 .footer {
-  height: 40vh;
+  height: 35vh;
   width: 100vw;
   background-color: #BFA399;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
 }
 .footer .redesSociales {
   display: flex;
