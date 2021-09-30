@@ -101,7 +101,7 @@ $("#botonCarrito").click( ()=> {
 
 
 
-function slider(){
+/* function slider(){
     let contador = 1
     console.log(contador)
     $("#before").click(()=>{
@@ -131,7 +131,7 @@ function slider(){
 
 }
 
-slider();
+slider(); */
 
 
 /* efectos enlaces */

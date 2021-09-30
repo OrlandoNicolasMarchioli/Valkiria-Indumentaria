@@ -499,6 +499,7 @@
             
         }
         h4{
+            font-size: 1.5rem;
             color: $bgColorSweetPink;
             text-align: center;
             margin-top: 1rem;
@@ -512,6 +513,7 @@
             align-items: center;
 
             h5{
+                font-size: 1.1rem;
                 height: 1rem;
                 
             }
@@ -565,29 +567,28 @@
         }
 
         .img1{
-            #img1{
-                display: none;
-                width: 100vw;
-                height: 80vh;
-                text-align: center;
-                
-            }
+            background-image: url(/img/carrousel/foto1.jpg);
+            width: 100vw;
+            height: 80vh;
+            background-size: 100%;
+            
+        
         }
         .img2{
-            #img2{
-                display: none;
-                width: 100vw;
-                height: 80vh;
-                text-align: center;
-            }
+            background-image: url(/img/carrousel/foto2.jpg);
+            background-size: 100%;
+            width: 100vw;
+            height: 80vh;
+            background-size: 100%;
+            display: none;
         }
         .img3{
-            #img3{
-                display: none;
-                width: 100vw;
-                height: 80vh;
-                text-align: center;
-            }
+            background-image: url(/img/carrousel/foto3.jpg);
+            background-size: 100%;
+            width: 100vw;
+            height: 80vh;
+            background-size: 100%;
+            display: none;
         }
 
         #buttonAfter{
@@ -604,16 +605,14 @@
         
     }
 }
+/* Fin slider */
 
-
-
+/* footer */
 .footer{
-    height: 35vh;
+    height: 30vh;
     width: 100vw;
     background-color: $bgColorSweetPink;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    
 
     .redesSociales{
         display: flex;
