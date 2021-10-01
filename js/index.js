@@ -8,7 +8,7 @@ function Productos(img,nombre,precio){
 }
 
 const producto1 = new Productos("../img/productos/index/1.jpeg","Sweater Wolf","2000")
-const producto2 = new Productos("../img/productos/index/2.jpeg","Jean 80's Syle","3500")
+const producto2 = new Productos("../img/productos/index/2.jpeg","Jean 80s Syle","3500")
 const producto3 = new Productos("../img/productos/index/3.jpeg","Jean light blue","3200")
 const producto4 = new Productos("../img/productos/jeanRoto2.jpg","Jean Dark blue","3500")
 const producto5 = new Productos("../img/productos/jeanRotoNegro.jpg","Sweater3 Wolf","3500")

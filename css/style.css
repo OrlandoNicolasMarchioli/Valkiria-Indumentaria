@@ -218,6 +218,7 @@
   text-align: center;
   font-size: 5rem;
   color: #BFA399;
+  font-family: "Montserrat", sans-serif;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -244,12 +245,14 @@
 .stickers .sticker h2 {
   color: #BFA399;
   font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   margin-top: 1rem;
 }
 .stickers .sticker h3 {
   color: #BFA399;
   font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
 }
 .stickers .sticker .img_wpp {
   margin-top: 1.5rem;
@@ -421,6 +424,7 @@
 }
 .title h2 {
   font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Ropa */
@@ -451,6 +455,7 @@
   color: #BFA399;
   text-align: center;
   margin-top: 1rem;
+  font-family: "Montserrat", sans-serif;
 }
 .container_fila .col_ropa .col__bolsa {
   display: flex;
@@ -463,6 +468,7 @@
 .container_fila .col_ropa .col__bolsa h5 {
   font-size: 1.1rem;
   height: 1rem;
+  font-family: "Montserrat", sans-serif;
 }
 .container_fila .col_ropa .col__bolsa button {
   background-color: #BFA399;
@@ -471,6 +477,7 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 4px 5px;
+  font-family: "Montserrat", sans-serif;
 }
 .container_fila .col_ropa .col__bolsa button:hover {
   transition: 0.5s;
@@ -543,25 +550,64 @@
 /* Fin slider */
 /* footer */
 .footer {
-  height: 30vh;
+  height: 35vh;
   width: 100vw;
   background-color: #BFA399;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 .footer .redesSociales {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
+.footer .redesSociales .enlaceRedes {
+  margin-top: 1rem;
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
+}
+.footer .redesSociales .enlaceRedes:hover {
+  transform: scale(1.05, 1.05);
+  transition: 0.5s;
+}
 .footer .enlacesFooter {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
+}
+.footer .enlacesFooter .enlacesFooterA {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.footer .enlacesFooter .enlacesFooterA a {
+  color: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
 }
 .footer .enlacesContactoFooter {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
+  margin-top: 1rem;
+}
+.footer .enlacesContactoFooter .enlacesContactoFooter__a {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 1rem;
+}
+.footer .enlacesContactoFooter .enlacesContactoFooter__a img {
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin-right: 5px;
+}
+.footer .enlacesContactoFooter .enlacesContactoFooter__a a {
+  color: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
