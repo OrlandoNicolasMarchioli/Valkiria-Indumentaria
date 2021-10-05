@@ -166,75 +166,7 @@
     }
 }
 
-.slider{
-    width: 90%;
-    min-height: 100vh;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-    
-    
-
-    .slider__container{
-        display: grid;
-        grid-template-columns: 50px 1fr 50px;
-        align-items: center;
-        background-color: $bgColorWhite;
-        gap: 1em;
-
-        .slider__arrow{
-            cursor: pointer;
-            width: 90%;
-
-            &:nth-of-type(2){
-                justify-self: end;
-            }
-        }
-        .slider__body{
-            grid-column: 2/3;
-            grid-row: 1/2;
-            opacity: 0;
-            pointer-events: none;
-            display: grid;
-            background-color: $bgColorWhite;
-            grid-template-columns: 1fr max-content;
-            align-items: center;
-            transition: opacity 1.5;
-
-
-            .slider__picture{
-
-                .slider__img{
-                    width: 600px;
-                    height: 600px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    display: block;
-                    margin: 0 auto;
-                }
-            }
-            .slider__texts{
-                max-width: 600px;
-
-                .subtitle{
-                    font-size: 2.5rem;
-                    margin-bottom: 20px;
-                }
-                .slider__review{
-                    font-weight: 600;
-                    font-size: 20px;
-                    line-height: 1.7;
-                }
-            }
-        }
-        .slider__body--show{
-            opacity: 1;
-            pointer-events: unset;
-        }
-    }
-}
-
-
+/* titulo principal */
 
 .tituloPrincipal{
     text-align: center;
@@ -244,6 +176,8 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+/* seccion stickers */
 .stickers{
     display: flex;
     flex-direction: row;
@@ -434,6 +368,7 @@
                 align-items: center;
                 justify-content: center;
                 opacity: 0.8;
+                margin-left: 1.5rem;
                 
                 .titleEnlace{        
                     text-align: center;
@@ -548,6 +483,7 @@
 
 /* Carrousel */
 #slider{
+    margin-top: 3rem;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -555,34 +491,49 @@
     width: 100vw;
 
     #containerImg{
-        display: flex;
-        flex-flow: row wrap;
+        display: grid;
+        grid-template-columns: 1fr 90vw 1fr;
+        grid-template-rows: 80vh;
+        grid-template-areas: "before img1 after";
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         width: 90vw;
         margin: 0;
+        
 
         #buttonBefore{
+            grid-area: before;
             border: none;
             background-color: transparent;
     
             #before{
                 border: none;
-                background-color: transparent;                
-                width: 30px;
+                background-color: $bgColorSweetPink;                
+                width: 40px;
                 cursor: pointer;
+                border-radius: 50%;
+                &:hover{
+                    background-color: white;
+                    border: solid 4px $bgColorSweetPink;
+                    transform: scale(1.05,1.05);
+                    transition: .5s;
+                }
             }
         }
 
         .img1{
+            border-radius: 50%;
+            grid-area: img1;
             background-image: url(/img/carrousel/foto1.jpg);
-            width: 100vw;
+            width: auto;
             height: 80vh;
             background-size: 100%;
             
         
         }
         .img2{
+            border-radius: 50%;
+            grid-area: none;
             background-image: url(/img/carrousel/foto2.jpg);
             background-size: 100%;
             width: 100vw;
@@ -591,6 +542,8 @@
             display: none;
         }
         .img3{
+            border-radius: 50%;
+            grid-area: none;
             background-image: url(/img/carrousel/foto3.jpg);
             background-size: 100%;
             width: 100vw;
@@ -600,14 +553,21 @@
         }
 
         #buttonAfter{
+            grid-area: after;
             border: none;
             background-color: transparent;
-            .after{
+            #after{
                 border: none;
-                background-color: transparent;
-                width: 30px;
-                height: 30px;
+                background-color: $bgColorSweetPink;                
+                width: 40px;
                 cursor: pointer;
+                border-radius: 50%;
+                &:hover{
+                    background-color: white;
+                    border: solid 4px $bgColorSweetPink;
+                    transform: scale(1.05,1.05);
+                    transition: .5s;
+                }
             }
         }
         

@@ -78,6 +78,7 @@ toggleButton.addEventListener("click", ()=> {
 /* acciones carrito de compra */
 let contadorCarrito = 0
 $("#botonCarrito").click( ()=> {
+    
     console.log(boton)
     if (contadorCarrito == 0){
         $("#carritoContainer").css({
@@ -97,41 +98,81 @@ $("#botonCarrito").click( ()=> {
 
 /* Carrousel */
 
-/* Carrousel */
+$(function (){
+    let contador = 1;
 
+    $("#before").click(function(){
+        $("#buttonBefore").animate({right: '20px'})
+        contador -= 1
+        console.log(contador)
+        if (contador == 1){
+            console.log(contador)
+            $("#containerImg").css({
+                "grid-template-areas":"before img1 after"
+            })
+            $("#img1").fadeIn(1000)
+        }
 
-
-/* function slider(){
-    let contador = 1
-    console.log(contador)
-    $("#before").click(()=>{
-        contador -= 1;
-    })
-    $("#after").click(()=>{
+        else if (contador == 0){
+            contador += 3
+            console.log(contador)
+            $(".img").css({
+                "grid-area": "img3"
+            })
+            $("#containerImg").css({
+                "grid-template-areas":"before img3 after"
+            })
+            $("#img3").fadeIn(1000)
+        }
+        else if(contador == 2){
+            console.log(contador)
+            $(".img").css({
+                "grid-area": "img2"
+            })
+            $("#containerImg").css({
+                "grid-template-areas":"before img2 after"
+            })
+            $("#img2").fadeIn(1000)
+        }
+    });
+    
+    $("#after").click(function(){
         contador += 1;
-    })
+        
+        if (contador == 3){
+            console.log(contador)
+            $(".img").css({
+                "grid-area": "img3"
+            })
+            $("#containerImg").css({
+                "grid-template-areas":"before img3 after"
+            })
+            $("#img3").fadeIn(1000)
+        }
 
-    if(contador == 4){
-        contador -= 3
-    }
+        else if (contador == 4){
+            contador -= 3
+            console.log(contador)
+            $("#containerImg").css({
+                "grid-template-areas":"before img1 after"
+            })
+            $("#img1").fadeIn(1000)
+        }
+        else if(contador == 2){
+            console.log(contador)
+            $(".img").css({
+                "grid-area": "img2"
+            })
+            $("#containerImg").css({
+                "grid-template-areas":"before img2 after"
+            })
+            $("#img2").fadeIn(1000)
+        }
+    });
 
-    else if(contador == -1){
-        contador += 4
-    }
+});
 
-    else if (contador == 1){
-        $("#img1").fadeIn(1000)
-    }
-    else if (contador == 2){
-        $("#img2").fadeIn(1500)
-    }
-    else if (contador == 3){
-        $("#img3").fadeIn(2000)
-    }
 
-}
-
-slider(); */
 
 
 /* efectos enlaces */
