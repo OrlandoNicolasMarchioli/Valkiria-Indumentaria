@@ -6,16 +6,15 @@ function Productos(img,nombre,precio){
 
 }
 
-const producto1 = new Productos("../img/productos/index/image10.jpeg","Blazer Moscú","3100")
-const producto2 = new Productos("../img/productos/index/image13.jpeg","Jacket Atenas","2500")
-const producto3 = new Productos("../img/productos/sweater.jpg","Sweater Sweet pink","1700")
-const producto4 = new Productos("../img/productos/sweater2.jpg","Sweater Grey","1700")
-const producto5 = new Productos("../img/productos/buzo.jpg","Buzo Harvard","1700")
-const producto6 = new Productos("../img/productos/index/1.jpeg","Sweater Wolf","1700")
+const producto1 = new Productos("../img/productos/index/image2.jpeg","Top cocó","850")
+const producto2 = new Productos("../img/productos/index/image11.jpeg","Blusa Chloe","2100")
+const producto3 = new Productos("../img/productos/index/image20.jpeg","Body Barcelona","900")
+const producto4 = new Productos("../img/productos/index/image7.jpeg","Top Sweet Green","850")
+
 
 
 /* Lista de productos */
-let listaProductos = [producto1, producto2,producto3,producto4,producto5,producto6]
+let listaProductos = [producto1, producto2,producto3,producto4]
 
 
 /* Estructur que genera una card de producto para agregarlo al html */
@@ -38,7 +37,7 @@ listaProductos.forEach(producto => {
 `   
 
 })
-const contenedor = document.getElementById("containerCamperas")
+const contenedor = document.getElementById("containerRemeras")
 contenedor.innerHTML = acumulador 
 
 let precioTotal = 0;

@@ -223,7 +223,7 @@
 }
 #section__enlaces .containerEnlace1 .enlace1 {
   grid-area: containerEnlace1;
-  width: 45vw;
+  width: 50vw;
   height: 80vh;
   background-image: url(/img/productos/jeanRoto2.jpg);
   background-size: 100%;
@@ -259,9 +259,8 @@
 #section__enlaces .containerEnlace2-3-4 {
   grid-area: containerEnlace2-3-4;
   display: grid;
-  align-items: center;
-  grid-template-columns: 47vw;
-  grid-template-columns: 40vh;
+  grid-template-columns: 50vw;
+  grid-template-rows: 80vh;
   grid-template-areas: "enlace2" "container";
 }
 #section__enlaces .containerEnlace2-3-4 .enlace2 {
@@ -302,7 +301,6 @@
 #section__enlaces .containerEnlace2-3-4 .container {
   grid-area: container;
   width: 47vw;
-  margin-top: 2.8rem;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
@@ -794,6 +792,128 @@
   cursor: pointer;
 }
 #containerCamperas .col_ropa .col__bolsa button:hover {
+  transition: 0.5s;
+  /* box-shadow: 3px 3px 3px rgba(0,0,0,0.15); */
+  border: solid 1px #BFA399;
+  background-color: #f2f2f2;
+  color: #BFA399;
+}
+
+/* HTML REMERAS */
+#containerRemeras {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 2rem;
+  justify-content: space-around;
+  margin-top: 3vh;
+}
+#containerRemeras .col_ropa {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 23vw;
+  box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+}
+#containerRemeras .col_ropa img {
+  height: 60vh;
+  width: 100%;
+}
+#containerRemeras .col_ropa h4 {
+  font-size: 1.5rem;
+  color: #BFA399;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+#containerRemeras .col_ropa .col__bolsa {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 10vw;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+}
+#containerRemeras .col_ropa .col__bolsa h5 {
+  font-size: 1.1rem;
+  height: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+#containerRemeras .col_ropa .col__bolsa button {
+  background-color: #BFA399;
+  border: solid 1px;
+  color: #f2f2f2;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 4px 5px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+#containerRemeras .col_ropa .col__bolsa button:hover {
+  transition: 0.5s;
+  /* box-shadow: 3px 3px 3px rgba(0,0,0,0.15); */
+  border: solid 1px #BFA399;
+  background-color: #f2f2f2;
+  color: #BFA399;
+}
+
+/* HTML PRODUCTOS */
+#containerProductos {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 2rem;
+  justify-content: space-around;
+  margin-top: 3vh;
+}
+#containerProductos .col_ropa {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 23vw;
+  box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+}
+#containerProductos .col_ropa img {
+  height: 60vh;
+  width: 100%;
+}
+#containerProductos .col_ropa h4 {
+  font-size: 1.5rem;
+  color: #BFA399;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+#containerProductos .col_ropa .col__bolsa {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 10vw;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+}
+#containerProductos .col_ropa .col__bolsa h5 {
+  font-size: 1.1rem;
+  height: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+#containerProductos .col_ropa .col__bolsa button {
+  background-color: #BFA399;
+  border: solid 1px;
+  color: #f2f2f2;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 4px 5px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+#containerProductos .col_ropa .col__bolsa button:hover {
   transition: 0.5s;
   /* box-shadow: 3px 3px 3px rgba(0,0,0,0.15); */
   border: solid 1px #BFA399;
