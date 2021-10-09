@@ -7,14 +7,14 @@ function Productos(img,nombre,precio){
 
 }
 
-const producto1 = new Productos("../img/productos/index/1.jpeg","Sweater Wolf","2000")
-const producto2 = new Productos("../img/productos/index/2.jpeg","Jean 80s Syle","3500")
-const producto3 = new Productos("../img/productos/index/3.jpeg","Jean light blue","3200")
-const producto4 = new Productos("../img/productos/jeanRoto2.jpg","Jean Dark blue","3500")
-const producto5 = new Productos("../img/productos/jeanRotoNegro.jpg","Sweater3 Wolf","3500")
-const producto6 = new Productos("../img/productos/sweater2.jpg","Sweater4 Wolf","3500")
-const producto7 = new Productos("../img/productos/combo1.jpg","Sweater4 Wolf","3500")
-const producto8 = new Productos("../img/productos/combo2.jpg","Sweater4 Wolf","3500")
+const producto1 = new Productos("../img/productos/index/image2.jpeg","Top cocó","850")
+const producto2 = new Productos("../img/productos/index/image8.jpeg","Pantalon Leg clásico","2600")
+const producto3 = new Productos("../img/productos/index/image10.jpeg","Blazer Moscú","3100")
+const producto4 = new Productos("../img/productos/index/image11.jpeg","Blusa Chloe","2100")
+const producto5 = new Productos("../img/productos/index/image13.jpeg","jacket Atenas","2500")
+const producto6 = new Productos("../img/productos/index/image14.jpeg","Wide Leg Sevilla","2600")
+const producto7 = new Productos("../img/productos/index/image15.jpeg","Jean mom clásico","2500")
+const producto8 = new Productos("../img/productos/index/image20.jpeg","Body Barcelona","900")
 
 
 /* Lista de productos */
@@ -98,81 +98,82 @@ $("#botonCarrito").click( ()=> {
 
 /* Carrousel */
 
-$(function (){
-    let contador = 1;
+function slider(){
 
-    $("#before").click(function(){
-        $("#buttonBefore").animate({right: '20px'})
-        contador -= 1
-        console.log(contador)
-        if (contador == 1){
-            console.log(contador)
-            $("#containerImg").css({
-                "grid-template-areas":"before img1 after"
-            })
-            $("#img1").fadeIn(1000)
-        }
-
-        else if (contador == 0){
-            contador += 3
-            console.log(contador)
-            $(".img").css({
-                "grid-area": "img3"
-            })
-            $("#containerImg").css({
-                "grid-template-areas":"before img3 after"
-            })
-            $("#img3").fadeIn(1000)
-        }
-        else if(contador == 2){
-            console.log(contador)
-            $(".img").css({
-                "grid-area": "img2"
-            })
-            $("#containerImg").css({
-                "grid-template-areas":"before img2 after"
-            })
-            $("#img2").fadeIn(1000)
-        }
-    });
+    $(".next").on("click",function(){
     
-    $("#after").click(function(){
-        contador += 1;
+        let currentImg = $(".active");
+        let nextImg = currentImg.next();
+
+        if (nextImg.length){
+            currentImg.removeClass("active").css("z-index", -10)
+            nextImg.addClass("active").css("z-index",10)
+        }
+    })
+    $(".prev").on("click",function(){
         
-        if (contador == 3){
-            console.log(contador)
-            $(".img").css({
-                "grid-area": "img3"
-            })
-            $("#containerImg").css({
-                "grid-template-areas":"before img3 after"
-            })
-            $("#img3").fadeIn(1000)
+        let currentImg = $(".active");
+        let prevImg = currentImg.prev();
+
+        if (prevImg.length){
+            currentImg.removeClass("active").css("z-index", -10)
+            prevImg.addClass("active").css("z-index",10)
         }
+    })
+}
+slider()
+/* fin slider */
+/* circulos posicionadores */
 
-        else if (contador == 4){
-            contador -= 3
-            console.log(contador)
-            $("#containerImg").css({
-                "grid-template-areas":"before img1 after"
-            })
-            $("#img1").fadeIn(1000)
+function circulosPosicionadores(){
+    let contador = 0
+    
+    $(".next").click(()=>{
+        contador += 1
+        if (contador > 3){
+            contador -=1
         }
-        else if(contador == 2){
-            console.log(contador)
-            $(".img").css({
-                "grid-area": "img2"
-            })
-            $("#containerImg").css({
-                "grid-template-areas":"before img2 after"
-            })
-            $("#img2").fadeIn(1000)
+        if (contador == 0){
+            $(".circle1").css({"background-color":"#BFA399"})
+            $(".circle2").css({"background-color":"transparent"})
+            $(".circle3").css({"background-color":"transparent"})
         }
-    });
+        if (contador == 1){
+            $(".circle2").css({"background-color":"#BFA399"})
+            $(".circle1").css({"background-color":"transparent"})
+            $(".circle3").css({"background-color":"transparent"})
+        }
+        if (contador == 2){
+            $(".circle3").css({"background-color":"#BFA399"})
+            $(".circle2").css({"background-color":"transparent"})
+            $(".circle1").css({"background-color":"transparent"})
+        }        
+        
+    })
+    $(".prev").click(()=>{
+        contador -= 1
+        if (contador < 0){
+            contador +=1
+        }
+        if (contador == 0){
+            $(".circle1").css({"background-color":"#BFA399"})
+            $(".circle2").css({"background-color":"transparent"})
+            $(".circle3").css({"background-color":"transparent"})
+        }
+        if (contador == 1){
+            $(".circle2").css({"background-color":"#BFA399"})
+            $(".circle1").css({"background-color":"transparent"})
+            $(".circle3").css({"background-color":"transparent"})
+        }
+        if (contador == 2){
+            $(".circle3").css({"background-color":"#BFA399"})
+            $(".circle2").css({"background-color":"transparent"})
+            $(".circle1").css({"background-color":"transparent"})
+        }        
 
-});
-
-
+    })
+}
+circulosPosicionadores()
 
 
 /* efectos enlaces */
@@ -180,7 +181,7 @@ $(function (){
 $(window).scroll(function(){
     let pixel = $(window).scrollTop()
     console.log(pixel)
-    if (500 < pixel <= 600){
+    if ( pixel == 500){
         $("#containerEnlace1").fadeIn(1500);
         $("#containerEnlace2-3-4").fadeIn(1500);
     }

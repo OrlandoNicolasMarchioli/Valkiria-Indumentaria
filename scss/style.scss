@@ -220,18 +220,25 @@
 
 /* Enlaces de pagina principal */
 #section__enlaces{
-    display: flex;
+    display: grid;
+    grid-template-columns: 47vw 47vw;
+    grid-template-rows: 40vh;
+    grid-template-areas: "containerEnlace1 containerEnlace2-3-4";
     flex-flow: row wrap;
     justify-content: space-around;
+    margin-bottom: 20rem;
 
     .containerEnlace1{
-        display: none;
+        display: flex;
         flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
 
         .enlace1{
-            width: 40vw;
+            grid-area: containerEnlace1;
+            width: 45vw;
             height: 80vh;
-            background-image: url(/img/productos/jeanRoto.jpg);
+            background-image: url(/img/productos/jeanRoto2.jpg);
             background-size: 100%;
             object-fit: cover;
             display: flex;
@@ -271,14 +278,21 @@
     }
 
     .containerEnlace2-3-4{
-        display: none;
-        flex-flow: column wrap;
+        grid-area: containerEnlace2-3-4;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 47vw;
+        grid-template-columns: 40vh;
+        grid-template-areas: "enlace2"
+                            "container";
+        
 
         .enlace2{
+            grid-area: enlace2;
             text-align: center;
-            background-image: url(/img/productos/sweater.jpg);
+            background-image: url(/img/productos//index/image10.jpeg);
             background-size: 100%;
-            width: 50vw;
+            width: 49vw;
             height: 30vh;
             object-fit: cover;
             display: flex;
@@ -315,16 +329,22 @@
             }
         }
         .container{
+            grid-area: container;
+            width: 47vw;
             margin-top: 2.8rem;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100%;
+            grid-template-areas: "enlace3 enlace4";
+            
+            
         
             .enlace3{
-                width: 25vw;
+                grid-area: enlace3;
+                width: 23vw;
                 height: 43.5vh;
                 object-fit: cover;
-                background-image: url(/img/productos/chaleco.jpg);
+                background-image: url(/img/productos/index/image18.jpeg);
                 background-size: 100%;
                 display: flex;
                 flex-flow: column nowrap;
@@ -358,10 +378,11 @@
                 }
             }
             .enlace4{
-                width: 25vw;
+                grid-area: enlace4;
+                width: 23vw;
                 height: 43.5vh;
                 object-fit: cover;
-                background-image: url(/img/productos/combo1.jpg);
+                background-image: url(/img/productos/cinturon.jpg);
                 background-size: 100%;
                 display: flex;
                 flex-flow: column nowrap;
@@ -467,6 +488,7 @@
                 margin-bottom: 1rem;
                 padding: 4px 5px;
                 font-family: $font-family;
+                cursor: pointer;
     
                 &:hover{
                     
@@ -482,98 +504,122 @@
 }
 
 /* Carrousel */
-#slider{
-    margin-top: 3rem;
+
+.container{
+    width: 90vw;
+    margin: 2rem auto;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-
-    #containerImg{
-        display: grid;
-        grid-template-columns: 1fr 90vw 1fr;
-        grid-template-rows: 80vh;
-        grid-template-areas: "before img1 after";
-        align-items: center;
-        justify-content: center;
-        width: 90vw;
-        margin: 0;
-        
-
-        #buttonBefore{
-            grid-area: before;
-            border: none;
-            background-color: transparent;
     
-            #before{
-                border: none;
-                background-color: $bgColorSweetPink;                
-                width: 40px;
-                cursor: pointer;
-                border-radius: 50%;
-                &:hover{
-                    background-color: white;
-                    border: solid 4px $bgColorSweetPink;
-                    transform: scale(1.05,1.05);
-                    transition: .5s;
-                }
-            }
+    .slider-outer{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 40px;
+            height: 40px;
         }
-
-        .img1{
-            border-radius: 50%;
-            grid-area: img1;
-            background-image: url(/img/carrousel/foto1.jpg);
-            width: auto;
-            height: 80vh;
-            background-size: 100%;
-            
         
-        }
-        .img2{
-            border-radius: 50%;
-            grid-area: none;
-            background-image: url(/img/carrousel/foto2.jpg);
-            background-size: 100%;
-            width: 100vw;
-            height: 80vh;
-            background-size: 100%;
-            display: none;
-        }
-        .img3{
-            border-radius: 50%;
-            grid-area: none;
-            background-image: url(/img/carrousel/foto3.jpg);
-            background-size: 100%;
-            width: 100vw;
-            height: 80vh;
-            background-size: 100%;
-            display: none;
-        }
-
-        #buttonAfter{
-            grid-area: after;
-            border: none;
-            background-color: transparent;
-            #after{
-                border: none;
-                background-color: $bgColorSweetPink;                
-                width: 40px;
-                cursor: pointer;
+        .slider-inner{
+            width: 80vw;
+            position: relative;
+            overflow: hidden;
+            padding: 3px;
+            display: flex;
+            flex-flow: row nowrap;
+            
+            
+            img{
+                display: none;
+                width: 80vw;
+                height: 70vh;
+                object-fit: cover;
                 border-radius: 50%;
-                &:hover{
-                    background-color: white;
-                    border: solid 4px $bgColorSweetPink;
-                    transform: scale(1.05,1.05);
-                    transition: .5s;
-                }
+            }
+            
+            img.active{
+                display: inline-block;
+            }
+            
+        }
+        .prev .next{
+            margin-top: 50%;
+            cursor: pointer;
+        }
+        .prev{
+            position: relative;
+            margin-left: -45px;
+            z-index: 100;
+            border: none;
+            background-color: $bgColorSweetPink;                
+            width: 40px;
+            cursor: pointer;
+            border-radius: 50%;
+
+            &:hover{
+                background-color: white;
+                border: solid 4px $bgColorSweetPink;
+                transform: scale(1.05,1.05);
+                transition: .5s;
             }
         }
+        .next{
+            position: relative;
+            margin-right: -45px;
+            z-index: 100;
+            border: none;
+            background-color: $bgColorSweetPink;                
+            width: 40px;
+            cursor: pointer;
+            border-radius: 50%;
+            &:hover{
+                background-color: white;
+                border: solid 4px $bgColorSweetPink;
+                transform: scale(1.05,1.05);
+                transition: .5s;
+            }
+            
+        }
+
         
     }
-}
-/* Fin slider */
+    .containerCircle{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        width: 100px;
+        margin-top: 1rem;
+
+        .circle1{
+            width: 30px;
+            height: 30px;
+            border: solid  $bgColorSweetPink;
+            border-radius: 60%;
+            background-color: $bgColorSweetPink;
+        }
+        .circle2{
+            width: 30px;
+            height: 30px;
+            border: solid  $bgColorSweetPink;
+            border-radius: 60%;
+            background-color: transparent;
+        }
+        .circle3{
+            width: 30px;
+            height: 30px;
+            border: solid  $bgColorSweetPink;
+            border-radius: 60%;
+            background-color: transparent;
+        }
+    }
+} 
+/* fin carousel */
+
 
 /* footer */
 .footer{
@@ -641,6 +687,211 @@
             a{
                 color: $bgColorWhite;
                 font-family: $font-family;
+            }
+        }
+    }
+}
+
+/* HTML PANTALON */
+
+#containerRopa{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 2rem;
+    justify-content: space-around;
+    margin-top: 3vh;
+    
+    .col_ropa{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+        height: 100%;
+        width: 23vw;
+        box-shadow: 4px 5px 10px rgba(0,0,0,0.15);
+        margin-bottom: 1rem;
+
+        img{
+            height: 60vh;
+            width: 100%;
+            
+        }
+        h4{
+            font-size: 1.5rem;
+            color: $bgColorSweetPink;
+            text-align: center;
+            margin-top: 1rem;
+            font-family: $font-family;
+        }
+        .col__bolsa{
+            display: flex;
+            flex-flow: column nowrap;
+            width: 10vw;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+
+            h5{
+                font-size: 1.1rem;
+                height: 1rem;
+                font-family: $font-family;
+                
+            }
+            button{
+                background-color: $bgColorSweetPink;
+                border: solid 1px;
+                color: $bgColorWhite;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                padding: 4px 5px;
+                font-family: $font-family;
+                cursor: pointer;
+    
+                &:hover{
+                    
+                    transition: 0.5s;
+                    /* box-shadow: 3px 3px 3px rgba(0,0,0,0.15); */
+                    border: solid 1px $bgColorSweetPink;
+                    background-color: $bgColorWhite;
+                    color: $bgColorSweetPink;
+                }
+            }
+        }
+    }
+}
+
+/* HTML ACCESORIOS */
+#containerAccesorios{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 2rem;
+    justify-content: space-around;
+    margin-top: 3vh;
+    
+    .col_ropa{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+        height: 100%;
+        width: 23vw;
+        box-shadow: 4px 5px 10px rgba(0,0,0,0.15);
+        margin-bottom: 1rem;
+
+        img{
+            height: 60vh;
+            width: 100%;
+            
+        }
+        h4{
+            font-size: 1.5rem;
+            color: $bgColorSweetPink;
+            text-align: center;
+            margin-top: 1rem;
+            font-family: $font-family;
+        }
+        .col__bolsa{
+            display: flex;
+            flex-flow: column nowrap;
+            width: 10vw;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+
+            h5{
+                font-size: 1.1rem;
+                height: 1rem;
+                font-family: $font-family;
+                
+            }
+            button{
+                background-color: $bgColorSweetPink;
+                border: solid 1px;
+                color: $bgColorWhite;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                padding: 4px 5px;
+                font-family: $font-family;
+                cursor: pointer;
+    
+                &:hover{
+                    
+                    transition: 0.5s;
+                    /* box-shadow: 3px 3px 3px rgba(0,0,0,0.15); */
+                    border: solid 1px $bgColorSweetPink;
+                    background-color: $bgColorWhite;
+                    color: $bgColorSweetPink;
+                }
+            }
+        }
+    }
+}
+
+/* HTML ACCESORIOS */
+#containerCamperas{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 2rem;
+    justify-content: space-around;
+    margin-top: 3vh;
+    
+    .col_ropa{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+        height: 100%;
+        width: 23vw;
+        box-shadow: 4px 5px 10px rgba(0,0,0,0.15);
+        margin-bottom: 1rem;
+
+        img{
+            height: 60vh;
+            width: 100%;
+            
+        }
+        h4{
+            font-size: 1.5rem;
+            color: $bgColorSweetPink;
+            text-align: center;
+            margin-top: 1rem;
+            font-family: $font-family;
+        }
+        .col__bolsa{
+            display: flex;
+            flex-flow: column nowrap;
+            width: 10vw;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+
+            h5{
+                font-size: 1.1rem;
+                height: 1rem;
+                font-family: $font-family;
+                
+            }
+            button{
+                background-color: $bgColorSweetPink;
+                border: solid 1px;
+                color: $bgColorWhite;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                padding: 4px 5px;
+                font-family: $font-family;
+                cursor: pointer;
+    
+                &:hover{
+                    
+                    transition: 0.5s;
+                    /* box-shadow: 3px 3px 3px rgba(0,0,0,0.15); */
+                    border: solid 1px $bgColorSweetPink;
+                    background-color: $bgColorWhite;
+                    color: $bgColorSweetPink;
+                }
             }
         }
     }

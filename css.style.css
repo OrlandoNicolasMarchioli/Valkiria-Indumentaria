@@ -208,24 +208,20 @@
 /* Enlaces de pagina principal */
 #section__enlaces {
   display: grid;
-  grid-template-columns: 47vw 47vw;
+  grid-template-columns: 50vw 50vw;
   grid-template-rows: 40vh;
   grid-template-areas: "containerEnlace1 containerEnlace2-3-4";
-  flex-flow: row wrap;
   justify-content: space-around;
-  margin-bottom: 20rem;
 }
 #section__enlaces .containerEnlace1 {
+  grid-area: containerEnlace1;
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
 }
 #section__enlaces .containerEnlace1 .enlace1 {
-  grid-area: containerEnlace1;
-  width: 45vw;
+  width: 40vw;
   height: 80vh;
-  background-image: url(/img/productos/jeanRoto2.jpg);
+  background-image: url(/img/productos/jeanRoto.jpg);
   background-size: 100%;
   object-fit: cover;
   display: flex;
@@ -258,18 +254,14 @@
 }
 #section__enlaces .containerEnlace2-3-4 {
   grid-area: containerEnlace2-3-4;
-  display: grid;
-  align-items: center;
-  grid-template-columns: 47vw;
-  grid-template-columns: 40vh;
-  grid-template-areas: "enlace2" "container";
+  display: flex;
+  flex-flow: column wrap;
 }
 #section__enlaces .containerEnlace2-3-4 .enlace2 {
-  grid-area: enlace2;
   text-align: center;
-  background-image: url(/img/productos//index/image10.jpeg);
+  background-image: url(/img/productos/sweater.jpg);
   background-size: 100%;
-  width: 49vw;
+  width: 50vw;
   height: 30vh;
   object-fit: cover;
   display: flex;
@@ -300,20 +292,16 @@
   transition: 0.6s;
 }
 #section__enlaces .containerEnlace2-3-4 .container {
-  grid-area: container;
-  width: 47vw;
   margin-top: 2.8rem;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100%;
-  grid-template-areas: "enlace3 enlace4";
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 #section__enlaces .containerEnlace2-3-4 .container .enlace3 {
-  grid-area: enlace3;
-  width: 23vw;
+  width: 25vw;
   height: 43.5vh;
   object-fit: cover;
-  background-image: url(/img/productos/index/image18.jpeg);
+  background-image: url(/img/productos/chaleco.jpg);
   background-size: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -343,11 +331,10 @@
   transition: 0.6s;
 }
 #section__enlaces .containerEnlace2-3-4 .container .enlace4 {
-  grid-area: enlace4;
-  width: 23vw;
+  width: 25vw;
   height: 43.5vh;
   object-fit: cover;
-  background-image: url(/img/productos/cinturon.jpg);
+  background-image: url(/img/productos/combo1.jpg);
   background-size: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -441,7 +428,6 @@
   margin-bottom: 1rem;
   padding: 4px 5px;
   font-family: "Montserrat", sans-serif;
-  cursor: pointer;
 }
 .container_fila .col_ropa .col__bolsa button:hover {
   transition: 0.5s;
@@ -452,11 +438,116 @@
 }
 
 /* Carrousel */
+/* #slider{
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center; 
+    width: 550px;
+
+    .containerImagenes{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+        height: 300px;
+
+        margin: 0;
+
+        .prev, .next{
+            float: left;
+            margin-top: 130px;
+            cursor: pointer;
+        }
+        .prev{
+            position: relative;
+            border: none;
+            background-color: transparent;
+            z-index: 100;
+
+            #before{
+                border: none;
+                background-color: $bgColorSweetPink;                
+                width: 40px;
+                cursor: pointer;
+                border-radius: 50%;
+                &:hover{
+                    background-color: white;
+                    border: solid 4px $bgColorSweetPink;
+                    transform: scale(1.05,1.05);
+                    transition: .5s;
+                }
+            }
+        }
+
+        .img1{
+            img{
+                border-radius: 50%;
+                background-size: 100%;
+                width: 500px;
+                height: 300px;
+                background-size: 100%;
+
+            }
+
+        }
+        .img1.active{
+            display: inline-block;
+        }
+        .img2{
+
+            img{
+                border-radius: 50%;
+                background-size: 100%;
+                width: 500px;
+                height: 300px;
+                background-size: 100%;
+                display: none;
+            }
+        }
+        .img3{
+
+            img{
+                border-radius: 50%;
+                background-size: 100%;
+                width: 500px;
+                height: 300px;
+                background-size: 100%;
+                display: none;
+            }
+        }
+
+        .next{
+            position: relative;
+            border: none;
+            background-color: transparent;
+            z-index: 100;
+
+            #after{
+                border: none;
+                background-color: $bgColorSweetPink;                
+                width: 40px;
+                cursor: pointer;
+                border-radius: 50%;
+                &:hover{
+                    background-color: white;
+                    border: solid 4px $bgColorSweetPink;
+                    transform: scale(1.05,1.05);
+                    transition: .5s;
+                }
+            }
+        }
+
+    }
+}  */
+/* Fin slider */
+/* slider 2 */
 .container {
   width: 90vw;
   margin: 2rem auto;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
 }
@@ -475,8 +566,6 @@
   position: relative;
   overflow: hidden;
   padding: 3px;
-  display: flex;
-  flex-flow: row nowrap;
 }
 .container .slider-outer .slider-inner img {
   display: none;
@@ -524,38 +613,7 @@
   transform: scale(1.05, 1.05);
   transition: 0.5s;
 }
-.container .containerCircle {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  height: 30px;
-  width: 100px;
-  margin-top: 1rem;
-}
-.container .containerCircle .circle1 {
-  width: 30px;
-  height: 30px;
-  border: solid #BFA399;
-  border-radius: 60%;
-  background-color: #BFA399;
-}
-.container .containerCircle .circle2 {
-  width: 30px;
-  height: 30px;
-  border: solid #BFA399;
-  border-radius: 60%;
-  background-color: transparent;
-}
-.container .containerCircle .circle3 {
-  width: 30px;
-  height: 30px;
-  border: solid #BFA399;
-  border-radius: 60%;
-  background-color: transparent;
-}
 
-/* fin carousel */
 /* footer */
 .footer {
   height: 35vh;
@@ -618,187 +676,4 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* HTML PANTALON */
-#containerRopa {
-  display: flex;
-  flex-flow: row wrap;
-  margin-bottom: 2rem;
-  justify-content: space-around;
-  margin-top: 3vh;
-}
-#containerRopa .col_ropa {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 23vw;
-  box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.15);
-  margin-bottom: 1rem;
-}
-#containerRopa .col_ropa img {
-  height: 60vh;
-  width: 100%;
-}
-#containerRopa .col_ropa h4 {
-  font-size: 1.5rem;
-  color: #BFA399;
-  text-align: center;
-  margin-top: 1rem;
-  font-family: "Montserrat", sans-serif;
-}
-#containerRopa .col_ropa .col__bolsa {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 10vw;
-  padding: 5px;
-  justify-content: center;
-  align-items: center;
-}
-#containerRopa .col_ropa .col__bolsa h5 {
-  font-size: 1.1rem;
-  height: 1rem;
-  font-family: "Montserrat", sans-serif;
-}
-#containerRopa .col_ropa .col__bolsa button {
-  background-color: #BFA399;
-  border: solid 1px;
-  color: #f2f2f2;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 4px 5px;
-  font-family: "Montserrat", sans-serif;
-  cursor: pointer;
-}
-#containerRopa .col_ropa .col__bolsa button:hover {
-  transition: 0.5s;
-  /* box-shadow: 3px 3px 3px rgba(0,0,0,0.15); */
-  border: solid 1px #BFA399;
-  background-color: #f2f2f2;
-  color: #BFA399;
-}
-
-/* HTML ACCESORIOS */
-#containerAccesorios {
-  display: flex;
-  flex-flow: row wrap;
-  margin-bottom: 2rem;
-  justify-content: space-around;
-  margin-top: 3vh;
-}
-#containerAccesorios .col_ropa {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 23vw;
-  box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.15);
-  margin-bottom: 1rem;
-}
-#containerAccesorios .col_ropa img {
-  height: 60vh;
-  width: 100%;
-}
-#containerAccesorios .col_ropa h4 {
-  font-size: 1.5rem;
-  color: #BFA399;
-  text-align: center;
-  margin-top: 1rem;
-  font-family: "Montserrat", sans-serif;
-}
-#containerAccesorios .col_ropa .col__bolsa {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 10vw;
-  padding: 5px;
-  justify-content: center;
-  align-items: center;
-}
-#containerAccesorios .col_ropa .col__bolsa h5 {
-  font-size: 1.1rem;
-  height: 1rem;
-  font-family: "Montserrat", sans-serif;
-}
-#containerAccesorios .col_ropa .col__bolsa button {
-  background-color: #BFA399;
-  border: solid 1px;
-  color: #f2f2f2;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 4px 5px;
-  font-family: "Montserrat", sans-serif;
-  cursor: pointer;
-}
-#containerAccesorios .col_ropa .col__bolsa button:hover {
-  transition: 0.5s;
-  /* box-shadow: 3px 3px 3px rgba(0,0,0,0.15); */
-  border: solid 1px #BFA399;
-  background-color: #f2f2f2;
-  color: #BFA399;
-}
-
-/* HTML ACCESORIOS */
-#containerCamperas {
-  display: flex;
-  flex-flow: row wrap;
-  margin-bottom: 2rem;
-  justify-content: space-around;
-  margin-top: 3vh;
-}
-#containerCamperas .col_ropa {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 23vw;
-  box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.15);
-  margin-bottom: 1rem;
-}
-#containerCamperas .col_ropa img {
-  height: 60vh;
-  width: 100%;
-}
-#containerCamperas .col_ropa h4 {
-  font-size: 1.5rem;
-  color: #BFA399;
-  text-align: center;
-  margin-top: 1rem;
-  font-family: "Montserrat", sans-serif;
-}
-#containerCamperas .col_ropa .col__bolsa {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 10vw;
-  padding: 5px;
-  justify-content: center;
-  align-items: center;
-}
-#containerCamperas .col_ropa .col__bolsa h5 {
-  font-size: 1.1rem;
-  height: 1rem;
-  font-family: "Montserrat", sans-serif;
-}
-#containerCamperas .col_ropa .col__bolsa button {
-  background-color: #BFA399;
-  border: solid 1px;
-  color: #f2f2f2;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 4px 5px;
-  font-family: "Montserrat", sans-serif;
-  cursor: pointer;
-}
-#containerCamperas .col_ropa .col__bolsa button:hover {
-  transition: 0.5s;
-  /* box-shadow: 3px 3px 3px rgba(0,0,0,0.15); */
-  border: solid 1px #BFA399;
-  background-color: #f2f2f2;
-  color: #BFA399;
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=css.style.css.map */
