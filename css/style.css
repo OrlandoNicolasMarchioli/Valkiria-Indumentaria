@@ -143,7 +143,7 @@
   width: 25vw;
   height: 30vh;
   background-color: #f2f2f2;
-  margin-right: 25vw;
+  margin-right: -25vw;
   display: none;
 }
 .carritoContainer .productoComprado {
@@ -209,11 +209,12 @@
 #section__enlaces {
   display: grid;
   grid-template-columns: 47vw 47vw;
-  grid-template-rows: 40vh;
-  grid-template-areas: "containerEnlace1 containerEnlace2-3-4";
-  flex-flow: row wrap;
+  grid-template-rows: 80vh;
+  grid-template-areas: "containerEnlace1 containerEnlace2_3_4";
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 20rem;
+  margin-bottom: 2rem;
 }
 #section__enlaces .containerEnlace1 {
   display: flex;
@@ -256,59 +257,24 @@
   transition: 0.6s;
   transform: translate(1.05, 1.05);
 }
-#section__enlaces .containerEnlace2-3-4 {
-  grid-area: containerEnlace2-3-4;
-  display: grid;
-  grid-template-columns: 50vw;
-  grid-template-rows: 80vh;
-  grid-template-areas: "enlace2" "container";
-}
-#section__enlaces .containerEnlace2-3-4 .enlace2 {
-  grid-area: enlace2;
-  text-align: center;
-  background-image: url(/img/productos//index/image10.jpeg);
-  background-size: 100%;
-  width: 49vw;
-  height: 30vh;
-  object-fit: cover;
+#section__enlaces .containerEnlace2_3_4 {
+  grid-area: containerEnlace2_3_4;
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  opacity: 0.8;
+  justify-content: space-around;
 }
-#section__enlaces .containerEnlace2-3-4 .enlace2 .titleEnlace2 {
-  text-align: center;
-  font-size: 4rem;
-  color: #f2f2f2;
-}
-#section__enlaces .containerEnlace2-3-4 .enlace2 .botonEnlace {
-  background-color: transparent;
-  padding: 10px 20px;
-  color: #f2f2f2;
-  border-radius: 40px;
-  border: 2.5px solid #f2f2f2;
-}
-#section__enlaces .containerEnlace2-3-4 .enlace2 .botonEnlace:hover {
-  background-color: #f2f2f2;
-  color: black;
-  transition: 0.5s;
-}
-#section__enlaces .containerEnlace2-3-4 .enlace2:hover {
-  opacity: 1;
-  transition: 0.6s;
-}
-#section__enlaces .containerEnlace2-3-4 .container {
+#section__enlaces .containerEnlace2_3_4 #container {
   grid-area: container;
-  width: 47vw;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100%;
-  grid-template-areas: "enlace3 enlace4";
+  width: 46vw;
+  height: 40vh;
+  display: flex;
+  flex-flow: row nowrap;
 }
-#section__enlaces .containerEnlace2-3-4 .container .enlace3 {
+#section__enlaces .containerEnlace2_3_4 #container .enlace3 {
   grid-area: enlace3;
   width: 23vw;
+  margin-top: 2rem;
   height: 43.5vh;
   object-fit: cover;
   background-image: url(/img/productos/index/image18.jpeg);
@@ -319,30 +285,31 @@
   justify-content: center;
   opacity: 0.8;
 }
-#section__enlaces .containerEnlace2-3-4 .container .enlace3 .titleEnlace {
+#section__enlaces .containerEnlace2_3_4 #container .enlace3 .titleEnlace {
   text-align: center;
   font-size: 4rem;
   color: #f2f2f2;
 }
-#section__enlaces .containerEnlace2-3-4 .container .enlace3 .botonEnlace {
+#section__enlaces .containerEnlace2_3_4 #container .enlace3 .botonEnlace {
   background-color: transparent;
   padding: 10px 20px;
   color: #f2f2f2;
   border-radius: 40px;
   border: 2.5px solid #f2f2f2;
 }
-#section__enlaces .containerEnlace2-3-4 .container .enlace3 .botonEnlace:hover {
+#section__enlaces .containerEnlace2_3_4 #container .enlace3 .botonEnlace:hover {
   background-color: #f2f2f2;
   color: black;
   transition: 0.5s;
 }
-#section__enlaces .containerEnlace2-3-4 .container .enlace3:hover {
+#section__enlaces .containerEnlace2_3_4 #container .enlace3:hover {
   opacity: 1;
   transition: 0.6s;
 }
-#section__enlaces .containerEnlace2-3-4 .container .enlace4 {
+#section__enlaces .containerEnlace2_3_4 #container .enlace4 {
   grid-area: enlace4;
   width: 23vw;
+  margin-top: 2rem;
   height: 43.5vh;
   object-fit: cover;
   background-image: url(/img/productos/cinturon.jpg);
@@ -354,24 +321,60 @@
   opacity: 0.8;
   margin-left: 1.5rem;
 }
-#section__enlaces .containerEnlace2-3-4 .container .enlace4 .titleEnlace {
+#section__enlaces .containerEnlace2_3_4 #container .enlace4 .titleEnlace {
   text-align: center;
   font-size: 4rem;
   color: #f2f2f2;
 }
-#section__enlaces .containerEnlace2-3-4 .container .enlace4 .botonEnlace {
+#section__enlaces .containerEnlace2_3_4 #container .enlace4 .botonEnlace {
   background-color: transparent;
   padding: 10px 20px;
   color: #f2f2f2;
   border-radius: 40px;
   border: 2.5px solid #f2f2f2;
 }
-#section__enlaces .containerEnlace2-3-4 .container .enlace4 .botonEnlace:hover {
+#section__enlaces .containerEnlace2_3_4 #container .enlace4 .botonEnlace:hover {
   background-color: #f2f2f2;
   color: black;
   transition: 0.5s;
 }
-#section__enlaces .containerEnlace2-3-4 .container .enlace4:hover {
+#section__enlaces .containerEnlace2_3_4 #container .enlace4:hover {
+  opacity: 1;
+  transition: 0.6s;
+}
+#section__enlaces .containerEnlace2_3_4 .enlace2 {
+  grid-area: enlace2;
+  background-image: url(/img/productos/index/image10.jpeg);
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  width: 46vw;
+  background-size: 100%;
+  object-fit: cover;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+#section__enlaces .containerEnlace2_3_4 .enlace2 .titleEnlace2 {
+  text-align: center;
+  font-size: 4rem;
+  color: #f2f2f2;
+}
+#section__enlaces .containerEnlace2_3_4 .enlace2 .botonEnlace {
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #f2f2f2;
+  border-radius: 40px;
+  border: 2.5px solid #f2f2f2;
+}
+#section__enlaces .containerEnlace2_3_4 .enlace2 .botonEnlace:hover {
+  background-color: #f2f2f2;
+  color: black;
+  transition: 0.5s;
+}
+#section__enlaces .containerEnlace2_3_4 .enlace2:hover {
   opacity: 1;
   transition: 0.6s;
 }
