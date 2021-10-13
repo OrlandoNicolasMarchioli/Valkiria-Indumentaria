@@ -507,7 +507,7 @@
     }
 }
 
-/* Carrousel */
+/* Carrousel index*/
 
 .container{
     width: 90vw;
@@ -597,13 +597,48 @@
         flex-wrap: nowrap;
 
         .enlaceSlider1{
-            display: none;
+            display: none;            
+            background-color: transparent;
+            padding: 10px 20px;
+            color: $bgColorWhite;
+            border-radius: 40px;
+            border: 2.5px solid $bgColorWhite;
+
+            &:hover{
+                background-color: $bgColorWhite;
+                color: black;
+                transition: .5s;
+            }                
         }
+        
         .enlaceSlider2{
             display: none;
+                        
+            background-color: transparent;
+            padding: 10px 20px;
+            color: $bgColorWhite;
+            border-radius: 40px;
+            border: 2.5px solid $bgColorWhite;
+
+            &:hover{
+                background-color: $bgColorWhite;
+                color: black;
+                transition: .5s;
+            }
         }
         .enlaceSlider3{
-            display: none;
+            display: none;            
+            background-color: transparent;
+            padding: 10px 20px;
+            color: $bgColorWhite;
+            border-radius: 40px;
+            border: 2.5px solid $bgColorWhite;
+
+            &:hover{
+                background-color: $bgColorWhite;
+                color: black;
+                transition: .5s;
+            }
         }
     }
     .containerCircle{

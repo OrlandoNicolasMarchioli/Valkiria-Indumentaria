@@ -452,7 +452,7 @@
   color: #BFA399;
 }
 
-/* Carrousel */
+/* Carrousel index*/
 .container {
   width: 90vw;
   margin: 2rem auto;
@@ -532,12 +532,42 @@
 }
 .container .containerEnlacesSlider .enlaceSlider1 {
   display: none;
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #f2f2f2;
+  border-radius: 40px;
+  border: 2.5px solid #f2f2f2;
+}
+.container .containerEnlacesSlider .enlaceSlider1:hover {
+  background-color: #f2f2f2;
+  color: black;
+  transition: 0.5s;
 }
 .container .containerEnlacesSlider .enlaceSlider2 {
   display: none;
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #f2f2f2;
+  border-radius: 40px;
+  border: 2.5px solid #f2f2f2;
+}
+.container .containerEnlacesSlider .enlaceSlider2:hover {
+  background-color: #f2f2f2;
+  color: black;
+  transition: 0.5s;
 }
 .container .containerEnlacesSlider .enlaceSlider3 {
   display: none;
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #f2f2f2;
+  border-radius: 40px;
+  border: 2.5px solid #f2f2f2;
+}
+.container .containerEnlacesSlider .enlaceSlider3:hover {
+  background-color: #f2f2f2;
+  color: black;
+  transition: 0.5s;
 }
 .container .containerCircle {
   display: flex;
