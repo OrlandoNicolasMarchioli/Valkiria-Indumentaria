@@ -103,7 +103,7 @@ $("#botonCarrito").click( ()=> {
 function slider(){
 
     $(".next").on("click",function(){
-    
+
         let currentImg = $(".active");
         let nextImg = currentImg.next();
 
@@ -113,6 +113,7 @@ function slider(){
         }
     })
     $(".prev").on("click",function(){
+
         
         let currentImg = $(".active");
         let prevImg = currentImg.prev();
@@ -125,6 +126,32 @@ function slider(){
 }
 slider()
 /* fin slider */
+/* fade in a las imagenes del carrousel */
+
+/* efectos al cambio de imagen */
+$(".active").fadeOut(1);
+$(".active").fadeIn(1500);
+function fadeImgSlider(){
+
+    $(".next").click(()=>{
+        console.log("Enctro al fade")
+        $(".active").fadeOut(1);
+        $(".active").fadeIn(1500)       
+    })
+    $(".prev").click(()=>{
+        console.log("Enctro al fade")
+        $(".active").fadeOut(1);
+        $(".active").fadeIn(1500);         
+    })
+    
+}
+fadeImgSlider()
+/* fin de efectos al cambio de iamgen del carrousel */
+
+/* Efecto de movimiento de las flechas */
+
+
+
 /* circulos posicionadores */
 
 function circulosPosicionadores(){
@@ -136,17 +163,23 @@ function circulosPosicionadores(){
             contador -=1
         }
         if (contador == 0){
-            $(".circle1").css({"background-color":"#BFA399"})
-            $(".circle2").css({"background-color":"transparent"})
-            $(".circle3").css({"background-color":"transparent"})
+            $(".circle1").css({"background-color":"#BFA399"});
+            $(".circle1").fadeOut(1);
+            $(".circle1").fadeIn(1000);
+            $(".circle2").css({"background-color":"transparent"});
+            $(".circle3").css({"background-color":"transparent"});
         }
         if (contador == 1){
             $(".circle2").css({"background-color":"#BFA399"})
+            $(".circle2").fadeOut(1);
+            $(".circle2").fadeIn(1000);
             $(".circle1").css({"background-color":"transparent"})
             $(".circle3").css({"background-color":"transparent"})
         }
         if (contador == 2){
             $(".circle3").css({"background-color":"#BFA399"})
+            $(".circle3").fadeOut(1);
+            $(".circle3").fadeIn(1000);
             $(".circle2").css({"background-color":"transparent"})
             $(".circle1").css({"background-color":"transparent"})
         }        
@@ -159,16 +192,22 @@ function circulosPosicionadores(){
         }
         if (contador == 0){
             $(".circle1").css({"background-color":"#BFA399"})
+            $(".circle1").fadeOut(1);
+            $(".circle1").fadeIn(1000);
             $(".circle2").css({"background-color":"transparent"})
             $(".circle3").css({"background-color":"transparent"})
         }
         if (contador == 1){
             $(".circle2").css({"background-color":"#BFA399"})
+            $(".circle2").fadeOut(1);
+            $(".circle2").fadeIn(1000);
             $(".circle1").css({"background-color":"transparent"})
             $(".circle3").css({"background-color":"transparent"})
         }
         if (contador == 2){
             $(".circle3").css({"background-color":"#BFA399"})
+            $(".circle3").fadeOut(1);
+            $(".circle3").fadeIn(1000);
             $(".circle2").css({"background-color":"transparent"})
             $(".circle1").css({"background-color":"transparent"})
         }        

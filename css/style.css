@@ -525,6 +525,20 @@
   transform: scale(1.05, 1.05);
   transition: 0.5s;
 }
+.container .containerEnlacesSlider {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.container .containerEnlacesSlider .enlaceSlider1 {
+  display: none;
+}
+.container .containerEnlacesSlider .enlaceSlider2 {
+  display: none;
+}
+.container .containerEnlacesSlider .enlaceSlider3 {
+  display: none;
+}
 .container .containerCircle {
   display: flex;
   flex-flow: row nowrap;
