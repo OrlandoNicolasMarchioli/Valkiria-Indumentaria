@@ -146,9 +146,31 @@ function fadeImgSlider(){
     
 }
 fadeImgSlider()
-/* fin de efectos al cambio de iamgen del carrousel */
+/* fin de efectos al cambio de imagen del carrousel */
 
 /* Efecto de movimiento de las flechas */
+
+$(".prev").click(()=>{
+    $(".prev").animate({
+        right : "40px",   },
+        "slow",);
+        
+    $(".prev").animate({
+        right : "0px",   },
+        "slow",);
+});
+$(".next").click(()=>{
+    $(".next").animate({
+        left : "40px",   },
+        "slow",);
+        
+    $(".next").animate({
+        left : "0px",   },
+        "slow",);
+});
+
+
+
 
 
 
