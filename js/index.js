@@ -46,20 +46,16 @@ contenedor.innerHTML = acumulador
 
 let precioTotal = 0;
 /* Botones y funciones */
-let boton = document.getElementsByClassName("botonCarrito");
-
-let total = 0
 
 /* Boton que agrega al carrito de */
 function agregarCarrito(seleccion){
     let encontrado = listaProductos.find(producto => producto.nombre == seleccion);
     const card = `
     <div class= "carritoContainer">
+        <img class="imagenproductoComprado" href="${encontrado.img}">
         <h5 class="productoComprado">${encontrado.nombre}</h5>
         <h6 class="productoprecio">${encontrado.precio}</h6>
-        <p>Precio total: ${total+= encontrado.precio}</p>
-    </div>`
-    console.log(encontrado)
+    </div>`   
 
     let carro = document.getElementById('botonCarrito')
     carro.innerHTML += card
