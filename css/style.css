@@ -143,8 +143,8 @@
   width: 25vw;
   height: 30vh;
   background-color: #f2f2f2;
-  margin-right: -25vw;
-  display: none;
+  /* margin-right: -25vw; */
+  display: flex;
 }
 .carritoContainer .productoComprado {
   display: flex;

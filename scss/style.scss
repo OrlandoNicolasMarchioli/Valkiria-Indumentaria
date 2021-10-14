@@ -150,8 +150,8 @@
     width: 25vw;
     height: 30vh;
     background-color: $bgColorWhite;
-    margin-right: -25vw;
-    display: none;
+    /* margin-right: -25vw; */
+    display: flex;
     .productoComprado{
         display: flex;
         flex-flow: row nowrap;

@@ -78,22 +78,21 @@ toggleButton.addEventListener("click", ()=> {
 /* acciones carrito de compra */
 
 $("#botonCarrito").click( ()=> {
-
-    if (contadorCarrito == 0){
+    console.log("click")
+    
         
-        $("#carritoContainer").css({
+    $("#carritoContainer").animate({
 
-            "display":"inline-block",
-            "background-color": "white",
-            "margin-right": "25vw"
-        })
-        $("#carritoContainer").show("slow");
-        contadorCarrito += 1
-    }
-    else if (contadorCarrito > 0){
-        $("#carritoContainer").hide("slow");
-        contadorCarrito -= 1
-    }
+        "display":"flex",
+        "flex-direction":"row",
+        "justify-content":"center",
+        "align-items":"center",
+        "background-color": "white",
+        "margin-right": "25vw"
+    })
+    $("#carritoContainer").show("slow");
+    
+
 })
 
 /* Fin acciones boton carrito */
@@ -134,12 +133,12 @@ $(".active").fadeIn(1500);
 function fadeImgSlider(){
 
     $(".next").click(()=>{
-        console.log("Enctro al fade")
+        
         $(".active").fadeOut(1);
         $(".active").fadeIn(1500)       
     })
     $(".prev").click(()=>{
-        console.log("Enctro al fade")
+        
         $(".active").fadeOut(1);
         $(".active").fadeIn(1500);         
     })
@@ -168,11 +167,6 @@ $(".next").click(()=>{
         left : "0px",   },
         "slow",);
 });
-
-
-
-
-
 
 /* circulos posicionadores */
 
@@ -244,7 +238,7 @@ $("#containerEnlace1").slideUp("fast");
         $("#containerEnlace2_3_4").slideUp("fast");
 $(window).scroll(function(){
     let pixel = $(window).scrollTop()
-    console.log(pixel)
+    
     if (pixel >= 400){
         $(".sticker").fadeIn()
     }
