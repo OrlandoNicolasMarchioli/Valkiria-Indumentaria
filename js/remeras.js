@@ -42,20 +42,16 @@ contenedor.innerHTML = acumulador
 
 let precioTotal = 0;
 /* Botones y funciones */
-let boton = document.getElementsByClassName("botonCarrito");
-
-let total = 0
 
 /* Boton que agrega al carrito de */
 function agregarCarrito(seleccion){
     let encontrado = listaProductos.find(producto => producto.nombre == seleccion);
     const card = `
     <div class= "carritoContainer">
+        <img class="imagenProductoComprado" src="${encontrado.img}">
         <h5 class="productoComprado">${encontrado.nombre}</h5>
-        <h6 class="productoprecio">${encontrado.precio}</h6>
-        <p>Precio total: ${total+= encontrado.precio}</p>
-    </div>`
-    console.log(encontrado)
+        <h6 class="productoPrecio">${encontrado.precio}</h6>
+    </div>`   
 
     let carro = document.getElementById('botonCarrito')
     carro.innerHTML += card
@@ -72,22 +68,39 @@ toggleButton.addEventListener("click", ()=> {
 }) 
 
 /* acciones carrito de compra */
-let contadorCarrito = 0
-$("#botonCarrito").click( ()=> {
-    
-    console.log(boton)
-    if (contadorCarrito == 0){
-        $("#carritoContainer").css({
-            "display":"flex",
-            "background-color": "white"
-        })
-        $("#carritoContainer").show("slow");
-        contadorCarrito += 1
+let contador = 0;
+
+$("#botonCarrito").on('click', function(){    
+    contador +=1
+    if(contador == 2){
+        contador -=2
+        $(".carritoContainer").css({"display":"none"})        
     }
-    else if (contadorCarrito > 0){
-        $("#carritoContainer").hide("slow");
-        contadorCarrito -= 1
+    if (contador == 1){
+        $(".carritoContainer").css({"display":"flex"})
+        $
+    }
+})
+/* Fin acciones boton carrito */
+
+/* Titulo carrito */
+let contador2 = 0;
+$("#botonCarrito").on('click', function(){
+    
+    contador2 +=1
+    if(contador2 == 2){
+        contador2 -=2
+        
+        $(".tituloBoton").css({"display":"none"})
+    }
+    if (contador2 == 1){
+        
+        $(".tituloBoton").css({"display":"flex"})
     }
 })
 
 /* Fin acciones boton carrito */
+
+/* efectos enlaces */
+$(".tituloPrincipal").slideUp(1);
+$(".tituloPrincipal").slideDown(1000);

@@ -57,9 +57,6 @@ contenedor.innerHTML = acumulador
 
 let precioTotal = 0;
 /* Botones y funciones */
-let boton = document.getElementsByClassName("botonCarrito");
-
-let total = 0
 
 /* Boton que agrega al carrito de */
 function agregarCarrito(seleccion){
@@ -76,7 +73,18 @@ function agregarCarrito(seleccion){
 }
 
 
+/* Nav bar */
+
+const toggleButton = document.getElementsByClassName("toggle-button")[0]
+const navbarLinks = document.getElementsByClassName("navbar-links")[0]
+
+toggleButton.addEventListener("click", ()=> {
+    navbarLinks.classList.toggle("active")
+}) 
+
+/* acciones carrito de compra */
 let contador = 0;
+
 $("#botonCarrito").on('click', function(){    
     contador +=1
     if(contador == 2){
@@ -90,34 +98,22 @@ $("#botonCarrito").on('click', function(){
 })
 /* Fin acciones boton carrito */
 
-
-/* Nav bar */
-
-const toggleButton = document.getElementsByClassName("toggle-button")[0]
-const navbarLinks = document.getElementsByClassName("navbar-links")[0]
-
-toggleButton.addEventListener("click", ()=> {
-    navbarLinks.classList.toggle("active")
-}) 
-
-/* acciones carrito de compra */
-let contadorCarrito = 0
-$("#botonCarrito").click( ()=> {
+/* Titulo carrito */
+let contador2 = 0;
+$("#botonCarrito").on('click', function(){
     
-    console.log(boton)
-    if (contadorCarrito == 0){
-        $("#carritoContainer").css({
-            "display":"flex",
-            "background-color": "white"
-        })
-        $("#carritoContainer").show("slow");
-        contadorCarrito += 1
+    contador2 +=1
+    if(contador2 == 2){
+        contador2 -=2
+        
+        $(".tituloBoton").css({"display":"none"})
     }
-    else if (contadorCarrito > 0){
-        $("#carritoContainer").hide("slow");
-        contadorCarrito -= 1
+    if (contador2 == 1){
+        
+        $(".tituloBoton").css({"display":"flex"})
     }
 })
+
 
 /* Fin acciones boton carrito */
 
