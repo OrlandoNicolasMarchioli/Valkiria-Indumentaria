@@ -139,22 +139,40 @@
 }
 
 /* boton carrito de compras */
-.carritoContainer {
+#botonCarrito .tituloBoton {
+  position: relative;
+  margin-left: -240px;
+  width: 200px;
+  font-family: "Montserrat", sans-serif;
+  display: none;
+}
+#botonCarrito .carritoContainer {
   width: 25vw;
   height: 30vh;
-  background-color: #f2f2f2;
+  background-image: linear-gradient(to bottom, #f2f2f2, #BFA399);
   /* margin-right: -25vw; */
-  display: flex;
-}
-.carritoContainer .productoComprado {
-  display: flex;
-  flex-flow: row nowrap;
+  display: none;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  background-color: #f2f2f2;
+  justify-content: flex-start;
+  margin-top: -1.5rem;
+  margin-left: -21.8vw;
+  margin-bottom: -10rem;
 }
-.carritoContainer .productoComprado .productoPrecio {
-  color: #BFA399;
+#botonCarrito .carritoContainer .imagenProductoComprado {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+#botonCarrito .carritoContainer .productoComprado {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  background-color: none;
+  margin-right: 1rem;
+}
+#botonCarrito .carritoContainer .productoPrecio {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  background-color: none;
 }
 
 /* titulo principal */
