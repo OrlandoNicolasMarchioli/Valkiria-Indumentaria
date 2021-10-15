@@ -617,49 +617,22 @@
         flex-wrap: nowrap;
 
         .enlaceSlider1{
-            display: none;            
+            display: flex;            
             background-color: transparent;
             padding: 10px 20px;
-            color: $bgColorWhite;
+            margin-top: 1rem;
+            color: $bgColorSweetPink;
             border-radius: 40px;
-            border: 2.5px solid $bgColorWhite;
+            border: 2.5px solid $bgColorSweetPink;
 
             &:hover{
-                background-color: $bgColorWhite;
+                background-color: transparent;
                 color: black;
                 transition: .5s;
             }                
         }
         
-        .enlaceSlider2{
-            display: none;
-                        
-            background-color: transparent;
-            padding: 10px 20px;
-            color: $bgColorWhite;
-            border-radius: 40px;
-            border: 2.5px solid $bgColorWhite;
-
-            &:hover{
-                background-color: $bgColorWhite;
-                color: black;
-                transition: .5s;
-            }
-        }
-        .enlaceSlider3{
-            display: none;            
-            background-color: transparent;
-            padding: 10px 20px;
-            color: $bgColorWhite;
-            border-radius: 40px;
-            border: 2.5px solid $bgColorWhite;
-
-            &:hover{
-                background-color: $bgColorWhite;
-                color: black;
-                transition: .5s;
-            }
-        }
+        
     }
     .containerCircle{
         display: flex;

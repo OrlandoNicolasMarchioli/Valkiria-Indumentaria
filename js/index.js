@@ -238,21 +238,31 @@ function circulosPosicionadores(){
 }
 circulosPosicionadores()
 
+
+
+
+
+
 /* efectos enlaces */
+$(".tituloPrincipal").slideUp(1);
+$(".tituloPrincipal").slideDown(1000);
+
+$(".enlaceSlider1").slideUp(1);
+$(".sticker").slideUp(1);
 $(".sticker").fadeOut()
 $("#containerEnlace1").slideUp("fast");
-        $("#containerEnlace2_3_4").slideUp("fast");
+$("#containerEnlace2_3_4").slideUp("fast");
 $(window).scroll(function(){
     let pixel = $(window).scrollTop()
     
+    if (pixel >= 300){
+        $(".enlaceSlider1").slideDown(800);
+    }
     if (pixel >= 400){
-        $(".sticker").fadeIn()
+        $(".sticker").fadeIn(2000)
     }
     if ( pixel >= 800){
         $("#containerEnlace1").slideDown(1500);
         $("#containerEnlace2_3_4").slideDown(1500);
     }
 })
-/* $("#containerEnlace1").slideDown(1500);
-$("#containerEnlace2_3_4").slideDown(1500);
- */

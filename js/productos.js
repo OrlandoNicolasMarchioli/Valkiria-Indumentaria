@@ -66,15 +66,29 @@ function agregarCarrito(seleccion){
     let encontrado = listaProductos.find(producto => producto.nombre == seleccion);
     const card = `
     <div class= "carritoContainer">
+        <img class="imagenProductoComprado" src="${encontrado.img}">
         <h5 class="productoComprado">${encontrado.nombre}</h5>
-        <h6 class="productoprecio">${encontrado.precio}</h6>
-        <p>Precio total: ${total+= encontrado.precio}</p>
-    </div>`
-    console.log(encontrado)
+        <h6 class="productoPrecio">${encontrado.precio}</h6>
+    </div>`   
 
     let carro = document.getElementById('botonCarrito')
     carro.innerHTML += card
 }
+
+
+let contador = 0;
+$("#botonCarrito").on('click', function(){    
+    contador +=1
+    if(contador == 2){
+        contador -=2
+        $(".carritoContainer").css({"display":"none"})        
+    }
+    if (contador == 1){
+        $(".carritoContainer").css({"display":"flex"})
+        $
+    }
+})
+/* Fin acciones boton carrito */
 
 
 /* Nav bar */
@@ -106,3 +120,7 @@ $("#botonCarrito").click( ()=> {
 })
 
 /* Fin acciones boton carrito */
+
+/* efectos enlaces */
+$(".tituloPrincipal").slideUp(1);
+$(".tituloPrincipal").slideDown(1000);
